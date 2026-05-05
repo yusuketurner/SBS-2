@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社山陰物流サービスからのお知らせ一覧。最新情報、メディア掲載、活動報告、採用情報などをお届けします。">
+<title>お知らせ | 株式会社山陰物流サービス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common.css">
+
+<style>
+.p-news-archive { padding: 120px 0; background: #fff; position: relative; overflow: hidden; }
+@media (max-width: 768px) { .p-news-archive { padding: 80px 0; } }
+.p-news-archive::before {
+  content: 'NEWS';
+  position: absolute; top: 60px; right: -40px;
+  font-family: var(--font-en);
+  font-size: clamp(180px, 28vw, 360px);
+  color: rgba(10, 37, 64, 0.04);
+  font-weight: 900; line-height: 1;
+  pointer-events: none; letter-spacing: -0.03em;
+}
+
+.p-news-filter {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-border);
+  position: relative; z-index: 1;
+}
+.p-news-filter__btn {
+  padding: 10px 24px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 13px; font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all .3s var(--ease-out);
+  font-family: var(--font-jp);
+}
+.p-news-filter__btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.p-news-filter__btn.is-active {
+  background: var(--color-primary); color: #fff;
+  border-color: var(--color-primary);
+}
+
+.p-news-pickup {
+  display: grid; grid-template-columns: 1fr; gap: 32px;
+  margin-bottom: 56px;
+  background: var(--color-primary); color: #fff;
+  border-radius: 8px; overflow: hidden;
+  position: relative; z-index: 1;
+}
+@media (min-width: 768px) {
+  .p-news-pickup { grid-template-columns: 1fr 1fr; gap: 0; }
+}
+.p-news-pickup__visual { aspect-ratio: 16/9; overflow: hidden; }
+@media (min-width: 768px) {
+  .p-news-pickup__visual { aspect-ratio: auto; height: 100%; }
+}
+.p-news-pickup__visual img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.p-news-pickup:hover .p-news-pickup__visual img { transform: scale(1.05); }
+.p-news-pickup__content {
+  padding: 40px 32px;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative;
+}
+@media (min-width: 1024px) { .p-news-pickup__content { padding: 56px; } }
+.p-news-pickup__label {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-en);
+  font-size: 12px; color: var(--color-accent);
+  letter-spacing: 0.4em; margin-bottom: 16px;
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: rgba(245, 166, 35, 0.1);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  border-radius: 999px;
+}
+.p-news-pickup__date {
+  font-family: var(--font-en);
+  font-size: 14px; color: var(--color-accent);
+  letter-spacing: 0.1em; margin-bottom: 12px;
+}
+.p-news-pickup__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  font-weight: 900; line-height: 1.5;
+  margin-bottom: 16px;
+}
+.p-news-pickup__text {
+  font-size: 14px; line-height: 2;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+.p-news-pickup__btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-weight: 700; font-size: 14px;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-accent);
+  transition: gap .3s;
+  align-self: flex-start;
+}
+.p-news-pickup:hover .p-news-pickup__btn { gap: 16px; }
+
+.p-news-list {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  position: relative; z-index: 1;
+}
+.p-news-list__item {
+  display: grid;
+  grid-template-columns: 120px 100px 1fr auto;
+  align-items: center; gap: 24px;
+  padding: 28px 32px;
+  border-bottom: 1px solid var(--color-border);
+  transition: all .3s;
+}
+.p-news-list__item:last-child { border-bottom: none; }
+.p-news-list__item:hover {
+  background: var(--color-bg-soft);
+  padding-left: 36px;
+}
+@media (max-width: 768px) {
+  .p-news-list__item {
+    grid-template-columns: 1fr; gap: 8px;
+    padding: 24px 20px;
+  }
+  .p-news-list__item:hover { padding-left: 24px; }
+}
+.p-news-list__date {
+  font-family: var(--font-en);
+  font-size: 16px; color: var(--color-text-light);
+  letter-spacing: 0.1em;
+}
+.p-news-list__cat {
+  display: inline-block;
+  padding: 4px 14px;
+  background: var(--color-primary); color: #fff;
+  border-radius: 999px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-align: center;
+  white-space: nowrap;
+}
+.p-news-list__cat--important { background: var(--color-red); }
+.p-news-list__cat--new { background: var(--color-accent); color: var(--color-primary); }
+.p-news-list__cat--media { background: #4a90e2; }
+.p-news-list__cat--activity { background: #5cb85c; }
+@media (max-width: 768px) {
+  .p-news-list__cat { justify-self: start; }
+}
+.p-news-list__title {
+  font-size: 15px; font-weight: 500;
+  color: var(--color-text); line-height: 1.6;
+}
+.p-news-list__arrow {
+  color: var(--color-text-light);
+  transition: transform .3s, color .3s;
+}
+.p-news-list__item:hover .p-news-list__arrow {
+  color: var(--color-accent); transform: translateX(6px);
+}
+@media (max-width: 768px) { .p-news-list__arrow { display: none; } }
+
+.p-pagination {
+  display: flex; justify-content: center; align-items: center; gap: 8px;
+  margin-top: 56px;
+  position: relative; z-index: 1;
+}
+.p-pagination__item {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--color-border);
+  font-family: var(--font-en);
+  font-size: 14px; color: var(--color-text);
+  transition: all .3s var(--ease-out);
+  cursor: pointer;
+}
+.p-pagination__item:hover {
+  border-color: var(--color-primary); color: var(--color-primary);
+}
+.p-pagination__item.is-active {
+  background: var(--color-primary); color: #fff;
+  border-color: var(--color-primary);
+}
+.p-pagination__item--prev,
+.p-pagination__item--next {
+  width: auto; padding: 0 16px;
+  border-radius: 999px; font-size: 12px;
+}
+.p-pagination__item--disabled { opacity: 0.4; cursor: default; }
+</style>
+</head>
+<body>
+
+<header class="l-header">
+  <div class="p-header__inner">
+    <a href="../index.html" class="p-header__logo">
+      <span class="p-header__logo-mark">SBS</span>
+      <span class="p-header__logo-text">
+        <small>SANIN LOGISTICS</small>
+        <strong>株式会社山陰物流サービス</strong>
+      </span>
+    </a>
+    <nav class="p-header__nav">
+      <ul class="p-header__nav-list">
+        <li><a href="../about/about.html" class="p-header__nav-link">会社概要</a></li>
+        <li><a href="../services/services.html" class="p-header__nav-link">業務内容</a></li>
+        <li><a href="news.html" class="p-header__nav-link is-current">お知らせ</a></li>
+        <li><a href="../recruit/recruit.html" class="p-header__nav-link">採用情報</a></li>
+      </ul>
+      <a href="../contact/contact.html" class="p-header__cta">お問い合わせ <span>→</span></a>
+    </nav>
+    <button class="p-header__menu-btn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="p-page-hero">
+  <div class="p-page-hero__bg">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="夕暮れの物流拠点">
+  </div>
+  <div class="p-page-hero__overlay"></div>
+  <div class="p-page-hero__grid"></div>
+  <div class="p-page-hero__inner">
+    <span class="p-page-hero__label">INFORMATION</span>
+    <span class="p-page-hero__title-en">NEWS &amp; UPDATES</span>
+    <h1 class="p-page-hero__title">お知らせ</h1>
+    <nav class="p-page-hero__breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">HOME</a>
+      <span class="p-page-hero__breadcrumb-sep">▶</span>
+      <span class="p-page-hero__breadcrumb-current">お知らせ</span>
+    </nav>
+  </div>
+</section>
+
+<section class="p-news-archive">
+  <div class="l-container">
+    <div class="p-section-head js-reveal">
+      <span class="p-section-head__label">ALL NEWS</span>
+      <h2 class="p-section-head__title">お知らせ一覧</h2>
+      <p class="p-section-head__lead">
+        <span class="u-underline">最新情報、活動報告、メディア掲載</span>など、当社からのお知らせをご覧いただけます。
+      </p>
+    </div>
+
+    <div class="p-news-filter js-reveal" data-delay="1">
+      <button class="p-news-filter__btn is-active">すべて</button>
+      <button class="p-news-filter__btn">重要</button>
+      <button class="p-news-filter__btn">お知らせ</button>
+      <button class="p-news-filter__btn">メディア掲載</button>
+      <button class="p-news-filter__btn">活動報告</button>
+    </div>
+
+    <a href="#" class="p-news-pickup js-reveal" data-delay="2">
+      <div class="p-news-pickup__visual">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="SBS物流センター竣工">
+      </div>
+      <div class="p-news-pickup__content">
+        <span class="p-news-pickup__label">★ PICKUP</span>
+        <div class="p-news-pickup__date">2025.04.01</div>
+        <h3 class="p-news-pickup__title">
+          SBS物流センター竣工のお知らせ｜ご挨拶（代表取締役 福田克己）
+        </h3>
+        <p class="p-news-pickup__text">
+          このたび、松江市東出雲町に最新鋭の「SBS物流センター」が竣工いたしました。<span class="u-underline">高床式ホーム仕様、可動式パレットラック、カーゴ用ドックレベラー</span>を完備し、保管から流通加工までワンストップでご提供できる体制が整いました。
+        </p>
+        <span class="p-news-pickup__btn">続きを読む <span>→</span></span>
+      </div>
+    </a>
+
+    <div class="p-news-list js-reveal" data-delay="3">
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2025.04.01</span>
+        <span class="p-news-list__cat p-news-list__cat--important">重要</span>
+        <span class="p-news-list__title">SBS物流センター竣工のお知らせ｜ご挨拶（代表取締役 福田克己）</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2025.03.15</span>
+        <span class="p-news-list__cat">お知らせ</span>
+        <span class="p-news-list__title">【金賞受賞】優秀安全運転事業所として表彰されました</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2025.02.20</span>
+        <span class="p-news-list__cat p-news-list__cat--media">メディア</span>
+        <span class="p-news-list__title">【TSK 山陰中央TV】Alevel 8 にて当社が特集されました</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2025.01.10</span>
+        <span class="p-news-list__cat p-news-list__cat--new">NEW</span>
+        <span class="p-news-list__title">【従業員募集】じょぶる島根に求人情報を掲載中｜正社員登用あり</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2024.12.05</span>
+        <span class="p-news-list__cat p-news-list__cat--activity">活動</span>
+        <span class="p-news-list__title">【スサノオマジック】搬入作業を担当いたしました</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2024.11.20</span>
+        <span class="p-news-list__cat">お知らせ</span>
+        <span class="p-news-list__title">年末年始の営業に関するお知らせ</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2024.10.18</span>
+        <span class="p-news-list__cat p-news-list__cat--activity">活動</span>
+        <span class="p-news-list__title">地域清掃ボランティア活動に参加いたしました</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2024.09.05</span>
+        <span class="p-news-list__cat p-news-list__cat--media">メディア</span>
+        <span class="p-news-list__title">山陰中央新報に当社の取り組みが掲載されました</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2024.08.20</span>
+        <span class="p-news-list__cat">お知らせ</span>
+        <span class="p-news-list__title">夏季休業期間のお知らせ</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+      <a href="#" class="p-news-list__item">
+        <span class="p-news-list__date">2024.07.15</span>
+        <span class="p-news-list__cat p-news-list__cat--activity">活動</span>
+        <span class="p-news-list__title">安全運転講習会を実施いたしました</span>
+        <span class="p-news-list__arrow">→</span>
+      </a>
+    </div>
+
+    <div class="p-pagination js-reveal" data-delay="4">
+      <span class="p-pagination__item p-pagination__item--prev p-pagination__item--disabled">PREV</span>
+      <span class="p-pagination__item is-active">1</span>
+      <span class="p-pagination__item">2</span>
+      <span class="p-pagination__item">3</span>
+      <span class="p-pagination__item p-pagination__item--next">NEXT →</span>
+    </div>
+  </div>
+</section>
+
+<section class="p-side-nav">
+  <div class="l-container">
+    <div class="p-section-head p-section-head--center js-reveal">
+      <span class="p-section-head__label">EXPLORE</span>
+      <h2 class="p-section-head__title">他のページを見る</h2>
+    </div>
+
+    <div class="p-side-nav__list js-reveal" data-delay="1">
+      <a href="../about/about.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="会社概要" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">会社概要</div><span class="p-side-nav__text-en">ABOUT</span></div>
+      </a>
+      <a href="../services/services.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="業務内容" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">業務内容</div><span class="p-side-nav__text-en">SERVICES</span></div>
+      </a>
+      <a href="../recruit/recruit.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="採用情報" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">採用情報</div><span class="p-side-nav__text-en">RECRUIT</span></div>
+      </a>
+      <a href="../contact/contact.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="お問い合わせ" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">お問い合わせ</div><span class="p-side-nav__text-en">CONTACT</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="p-contact-cta">
+  <div class="l-container">
+    <div class="p-contact-cta__label">CONTACT</div>
+    <h2 class="p-contact-cta__title">お困りごとやご相談、<br>お気軽にお問い合わせください</h2>
+    <p class="p-contact-cta__text">
+      運送・物流に関するお困りごとやご相談等がございましたら、お気軽にお問い合わせください。経験豊富なスタッフが丁寧にお応えいたします。
+    </p>
+    <a href="../contact/contact.html" class="c-btn c-btn--primary p-contact-cta__btn">
+      お問い合わせフォームへ <span class="c-btn__arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="l-footer">
+  <div class="l-container">
+    <div class="p-footer__top">
+      <div>
+        <div class="p-header__logo" style="color:#fff; margin-bottom:24px;">
+          <span class="p-header__logo-mark">SBS</span>
+          <span class="p-header__logo-text">
+            <small>SANIN LOGISTICS</small>
+            <strong>株式会社山陰物流サービス</strong>
+          </span>
+        </div>
+        <p class="p-footer__company-info">
+          〒699-0109 島根県松江市東出雲町錦浜583-19<br>
+          TEL: 0852-67-5566 / FAX: 0852-67-3300<br>
+          営業時間 平日 8:00 - 17:00
+        </p>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">SERVICES</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="../services/services.html" class="p-footer__nav-link">業務内容トップ</a></li>
+          <li><a href="../services/warehouse.html" class="p-footer__nav-link">営業倉庫</a></li>
+          <li><a href="../services/transport.html" class="p-footer__nav-link">幹線輸送</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">COMPANY</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="../about/about.html" class="p-footer__nav-link">会社概要</a></li>
+          <li><a href="../about/greeting.html" class="p-footer__nav-link">代表挨拶</a></li>
+          <li><a href="../about/history.html" class="p-footer__nav-link">沿革</a></li>
+          <li><a href="news.html" class="p-footer__nav-link">お知らせ</a></li>
+          <li><a href="../recruit/recruit.html" class="p-footer__nav-link">採用情報</a></li>
+          <li><a href="../contact/contact.html" class="p-footer__nav-link">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-footer__bottom">
+      <div class="p-footer__copy">© 2025 株式会社山陰物流サービス All Rights Reserved.</div>
+      <div class="p-footer__legal">
+        <a href="#">個人情報保護方針</a>
+        <a href="#">サイトマップ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>

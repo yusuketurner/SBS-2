@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社山陰物流サービスの業務内容｜幹線輸送、一般貨物輸送、定期輸送、付帯作業輸送、スポット輸送、営業倉庫、物流代行の7つのサービスをご提供。">
+<title>業務内容 | 株式会社山陰物流サービス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common.css">
+
+<style>
+.p-services-intro { padding: 120px 0; background: #fff; position: relative; overflow: hidden; }
+@media (max-width: 768px) { .p-services-intro { padding: 80px 0; } }
+.p-services-intro::before {
+  content: 'SERVICES';
+  position: absolute; top: 60px; right: -40px;
+  font-family: var(--font-en);
+  font-size: clamp(180px, 24vw, 320px);
+  color: rgba(10, 37, 64, 0.04);
+  font-weight: 900; line-height: 1;
+  pointer-events: none; letter-spacing: -0.03em;
+}
+.p-services-intro__lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.8; font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+  max-width: 820px; letter-spacing: 0.02em;
+  position: relative; z-index: 1;
+}
+.p-services-intro__text {
+  font-size: 15px; line-height: 2;
+  color: var(--color-text-light);
+  max-width: 820px;
+  position: relative; z-index: 1;
+}
+
+.p-services-list { background: var(--color-bg-soft); padding: 120px 0; }
+@media (max-width: 768px) { .p-services-list { padding: 80px 0; } }
+.p-service-card { margin-bottom: 80px; }
+.p-service-card:last-child { margin-bottom: 0; }
+@media (max-width: 768px) { .p-service-card { margin-bottom: 56px; } }
+
+.p-service-card__inner {
+  display: grid; grid-template-columns: 1fr; gap: 32px;
+  align-items: center;
+  background: #fff; border-radius: 8px; overflow: hidden;
+  box-shadow: 0 10px 40px rgba(10, 37, 64, 0.06);
+}
+@media (min-width: 1024px) {
+  .p-service-card__inner { grid-template-columns: 1fr 1fr; gap: 0; }
+}
+@media (min-width: 1024px) {
+  .p-service-card:nth-child(even) .p-service-card__visual { order: 2; }
+}
+
+.p-service-card__visual {
+  position: relative; aspect-ratio: 4/3; overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .p-service-card__visual { aspect-ratio: auto; height: 100%; min-height: 420px; }
+}
+.p-service-card__visual img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.p-service-card:hover .p-service-card__visual img { transform: scale(1.05); }
+.p-service-card__num {
+  position: absolute; top: 24px; left: 24px;
+  font-family: var(--font-en);
+  background: var(--color-accent);
+  color: var(--color-primary);
+  padding: 8px 18px; border-radius: 4px;
+  font-size: 13px; letter-spacing: 0.2em;
+  font-weight: 700; z-index: 2;
+}
+.p-service-card__content { padding: 48px 40px; }
+@media (max-width: 768px) { .p-service-card__content { padding: 32px 24px; } }
+.p-service-card__category {
+  font-family: var(--font-en);
+  font-size: 12px; letter-spacing: 0.3em;
+  color: var(--color-accent); margin-bottom: 12px;
+}
+.p-service-card__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 900; color: var(--color-primary);
+  margin-bottom: 20px;
+  letter-spacing: 0.04em; line-height: 1.4;
+}
+.p-service-card__text {
+  font-size: 15px; line-height: 2;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+.p-service-card__features {
+  display: grid; grid-template-columns: 1fr;
+  gap: 12px; margin-bottom: 32px;
+}
+@media (min-width: 540px) {
+  .p-service-card__features { grid-template-columns: 1fr 1fr; }
+}
+.p-service-card__feature {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: var(--color-primary);
+  font-weight: 500;
+}
+.p-service-card__feature::before {
+  content: '✓';
+  flex-shrink: 0; width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  display: grid; place-items: center;
+  font-size: 12px; font-weight: 700;
+}
+.p-service-card__btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-weight: 700; font-size: 14px;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 4px;
+  transition: all .3s;
+}
+.p-service-card__btn:hover {
+  color: var(--color-accent); border-color: var(--color-accent);
+  gap: 16px;
+}
+
+.p-facility { background: #fff; padding: 120px 0; }
+@media (max-width: 768px) { .p-facility { padding: 80px 0; } }
+.p-facility__inner {
+  display: grid; grid-template-columns: 1fr; gap: 56px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .p-facility__inner { grid-template-columns: 1.2fr 1fr; gap: 80px; }
+}
+.p-facility__visual { position: relative; }
+.p-facility__visual-main {
+  aspect-ratio: 4/3; overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(10, 37, 64, 0.18);
+}
+.p-facility__visual-main img { width: 100%; height: 100%; object-fit: cover; }
+.p-facility__visual-tag {
+  position: absolute; top: -20px; right: -20px;
+  background: var(--color-accent); color: var(--color-primary);
+  padding: 16px 24px; border-radius: 4px;
+  font-weight: 700; font-family: var(--font-en);
+  font-size: 14px; letter-spacing: 0.2em;
+  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.4);
+}
+.p-facility__features-list {
+  display: grid; grid-template-columns: 1fr;
+  gap: 16px; margin-top: 32px;
+}
+.p-facility__feature {
+  padding: 20px 24px;
+  background: var(--color-bg-soft);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 4px;
+}
+.p-facility__feature-title {
+  font-weight: 700; color: var(--color-primary);
+  margin-bottom: 4px; font-size: 15px;
+}
+.p-facility__feature-text {
+  font-size: 13px; color: var(--color-text-light);
+  line-height: 1.7;
+}
+</style>
+</head>
+<body>
+
+<header class="l-header">
+  <div class="p-header__inner">
+    <a href="../index.html" class="p-header__logo">
+      <span class="p-header__logo-mark">SBS</span>
+      <span class="p-header__logo-text">
+        <small>SANIN LOGISTICS</small>
+        <strong>株式会社山陰物流サービス</strong>
+      </span>
+    </a>
+    <nav class="p-header__nav">
+      <ul class="p-header__nav-list">
+        <li><a href="../about/about.html" class="p-header__nav-link">会社概要</a></li>
+        <li><a href="services.html" class="p-header__nav-link is-current">業務内容</a></li>
+        <li><a href="../news/news.html" class="p-header__nav-link">お知らせ</a></li>
+        <li><a href="../recruit/recruit.html" class="p-header__nav-link">採用情報</a></li>
+      </ul>
+      <a href="../contact/contact.html" class="p-header__cta">お問い合わせ <span>→</span></a>
+    </nav>
+    <button class="p-header__menu-btn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="p-page-hero">
+  <div class="p-page-hero__bg">
+    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="走行する大型トラック">
+  </div>
+  <div class="p-page-hero__overlay"></div>
+  <div class="p-page-hero__grid"></div>
+  <div class="p-page-hero__inner">
+    <span class="p-page-hero__label">SERVICES</span>
+    <span class="p-page-hero__title-en">OUR SERVICES</span>
+    <h1 class="p-page-hero__title">業務内容</h1>
+    <nav class="p-page-hero__breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">HOME</a>
+      <span class="p-page-hero__breadcrumb-sep">▶</span>
+      <span class="p-page-hero__breadcrumb-current">業務内容</span>
+    </nav>
+  </div>
+</section>
+
+<section class="p-services-intro">
+  <div class="l-container">
+    <div class="p-section-head js-reveal">
+      <span class="p-section-head__label">OUR SOLUTIONS</span>
+      <h2 class="p-section-head__title">
+        多様なニーズに応える、<br>
+        <em>7つの物流ソリューション</em>
+      </h2>
+    </div>
+
+    <p class="p-services-intro__lead js-reveal" data-delay="1">
+      一般貨物輸送から倉庫管理、物流代行まで。<br>
+      山陰物流サービスは、お客様の<span class="u-underline">あらゆる物流ニーズ</span>に<br>
+      ワンストップでお応えします。
+    </p>
+
+    <p class="p-services-intro__text js-reveal" data-delay="2">
+      創業から22年間で培った経験と、2025年4月に竣工した最新鋭のSBS物流センター。<br>
+      ハードとソフトの両面から、お客様の事業を物流の側面で力強くサポートします。短距離・短時間のスポット輸送から、長期にわたる定期輸送、保管・流通加工まで、お客様の状況に合わせた最適なソリューションをご提案いたします。
+    </p>
+  </div>
+</section>
+
+<section class="p-services-list">
+  <div class="l-container">
+
+    <article class="p-service-card js-reveal">
+      <div class="p-service-card__inner">
+        <div class="p-service-card__visual">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="SBS物流センターの営業倉庫">
+          <span class="p-service-card__num">SERVICE 01</span>
+        </div>
+        <div class="p-service-card__content">
+          <div class="p-service-card__category">FEATURED — WAREHOUSE</div>
+          <h3 class="p-service-card__title">営業倉庫・物流センター</h3>
+          <p class="p-service-card__text">
+            2025年4月竣工の最新鋭SBS物流センター。高床式ホーム仕様、可動式パレットラック、カーゴ用ドックレベラーを完備し、保管から流通加工まで一貫対応します。
+          </p>
+          <div class="p-service-card__features">
+            <span class="p-service-card__feature">高床式ホーム</span>
+            <span class="p-service-card__feature">可動式パレットラック</span>
+            <span class="p-service-card__feature">ドックレベラー</span>
+            <span class="p-service-card__feature">流通加工対応</span>
+          </div>
+          <a href="warehouse.html" class="p-service-card__btn">
+            詳細を見る <span>→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-service-card js-reveal">
+      <div class="p-service-card__inner">
+        <div class="p-service-card__visual">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="幹線輸送">
+          <span class="p-service-card__num">SERVICE 02</span>
+        </div>
+        <div class="p-service-card__content">
+          <div class="p-service-card__category">LONG-DISTANCE TRANSPORT</div>
+          <h3 class="p-service-card__title">幹線輸送</h3>
+          <p class="p-service-card__text">
+            山陰エリアと中国・関西・山陽方面を結ぶ幹線輸送。経験豊富なドライバーが、長距離輸送でも確実かつ迅速にお客様の貨物をお届けします。
+          </p>
+          <div class="p-service-card__features">
+            <span class="p-service-card__feature">中国・関西方面</span>
+            <span class="p-service-card__feature">夜間運行対応</span>
+            <span class="p-service-card__feature">大型車両完備</span>
+            <span class="p-service-card__feature">運行管理システム</span>
+          </div>
+          <a href="transport.html" class="p-service-card__btn">
+            詳細を見る <span>→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-service-card js-reveal">
+      <div class="p-service-card__inner">
+        <div class="p-service-card__visual">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="一般貨物輸送">
+          <span class="p-service-card__num">SERVICE 03</span>
+        </div>
+        <div class="p-service-card__content">
+          <div class="p-service-card__category">GENERAL CARGO</div>
+          <h3 class="p-service-card__title">一般貨物輸送</h3>
+          <p class="p-service-card__text">
+            お客様の様々な貨物に対応する一般貨物輸送業務。小口から大口まで、貨物の特性やお届け先に応じた最適な輸送プランをご提案いたします。
+          </p>
+          <div class="p-service-card__features">
+            <span class="p-service-card__feature">小口～大口対応</span>
+            <span class="p-service-card__feature">山陰エリア中心</span>
+            <span class="p-service-card__feature">迅速な対応</span>
+            <span class="p-service-card__feature">柔軟な料金設定</span>
+          </div>
+          <a href="../contact/contact.html" class="p-service-card__btn">
+            お問い合わせ <span>→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-service-card js-reveal">
+      <div class="p-service-card__inner">
+        <div class="p-service-card__visual">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="定期輸送">
+          <span class="p-service-card__num">SERVICE 04</span>
+        </div>
+        <div class="p-service-card__content">
+          <div class="p-service-card__category">REGULAR TRANSPORT</div>
+          <h3 class="p-service-card__title">定期輸送</h3>
+          <p class="p-service-card__text">
+            毎日・毎週など、決まったスケジュールでの定期的な輸送業務。決まった時間に、決まった場所へ、確実にお届けすることで、お客様の事業活動を安定的に支えます。
+          </p>
+          <div class="p-service-card__features">
+            <span class="p-service-card__feature">毎日・週次対応</span>
+            <span class="p-service-card__feature">時間厳守</span>
+            <span class="p-service-card__feature">専属ドライバー</span>
+            <span class="p-service-card__feature">長期契約割引</span>
+          </div>
+          <a href="../contact/contact.html" class="p-service-card__btn">
+            お問い合わせ <span>→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-service-card js-reveal">
+      <div class="p-service-card__inner">
+        <div class="p-service-card__visual">
+          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="付帯作業輸送">
+          <span class="p-service-card__num">SERVICE 05</span>
+        </div>
+        <div class="p-service-card__content">
+          <div class="p-service-card__category">VALUE-ADDED TRANSPORT</div>
+          <h3 class="p-service-card__title">付帯作業輸送</h3>
+          <p class="p-service-card__text">
+            輸送に加え、荷役作業、組立、設置、開梱・梱包などの付帯作業もワンストップで対応。経験豊富なスタッフが、お客様の現場でも丁寧に対応いたします。
+          </p>
+          <div class="p-service-card__features">
+            <span class="p-service-card__feature">荷役・積み込み</span>
+            <span class="p-service-card__feature">組立・設置</span>
+            <span class="p-service-card__feature">梱包・開梱</span>
+            <span class="p-service-card__feature">専門スタッフ常駐</span>
+          </div>
+          <a href="../contact/contact.html" class="p-service-card__btn">
+            お問い合わせ <span>→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-service-card js-reveal">
+      <div class="p-service-card__inner">
+        <div class="p-service-card__visual">
+          <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="スポット輸送">
+          <span class="p-service-card__num">SERVICE 06</span>
+        </div>
+        <div class="p-service-card__content">
+          <div class="p-service-card__category">SPOT TRANSPORT</div>
+          <h3 class="p-service-card__title">スポット輸送</h3>
+          <p class="p-service-card__text">
+            突発的な輸送ニーズや単発のお仕事にも柔軟にお応えします。「今すぐ運んでほしい」「急ぎで対応してほしい」というご要望に、スピーディに対応いたします。
+          </p>
+          <div class="p-service-card__features">
+            <span class="p-service-card__feature">緊急対応可</span>
+            <span class="p-service-card__feature">単発OK</span>
+            <span class="p-service-card__feature">柔軟な料金</span>
+            <span class="p-service-card__feature">即日見積</span>
+          </div>
+          <a href="../contact/contact.html" class="p-service-card__btn">
+            お問い合わせ <span>→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-service-card js-reveal">
+      <div class="p-service-card__inner">
+        <div class="p-service-card__visual">
+          <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="物流代行">
+          <span class="p-service-card__num">SERVICE 07</span>
+        </div>
+        <div class="p-service-card__content">
+          <div class="p-service-card__category">FULFILLMENT</div>
+          <h3 class="p-service-card__title">物流代行（フルフィルメント）</h3>
+          <p class="p-service-card__text">
+            保管から梱包、出荷までEC事業の物流業務を丸ごと代行。お客様は本業に集中していただけます。EC事業者様や通販事業者様の物流ニーズにお応えします。
+          </p>
+          <div class="p-service-card__features">
+            <span class="p-service-card__feature">保管・梱包・出荷</span>
+            <span class="p-service-card__feature">EC事業対応</span>
+            <span class="p-service-card__feature">流通加工</span>
+            <span class="p-service-card__feature">在庫管理</span>
+          </div>
+          <a href="../contact/contact.html" class="p-service-card__btn">
+            お問い合わせ <span>→</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="p-facility">
+  <div class="l-container">
+    <div class="p-facility__inner">
+      <div class="p-facility__visual js-reveal">
+        <div class="p-facility__visual-main">
+          <img src="https://images.unsplash.com/photo-1591785472141-7adb0d4d4cf2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="SBS物流センター内観">
+        </div>
+        <div class="p-facility__visual-tag">2025.04 NEW</div>
+      </div>
+
+      <div class="js-reveal" data-delay="1">
+        <div class="p-section-head" style="margin-bottom:32px;">
+          <span class="p-section-head__label">FACILITY</span>
+          <h2 class="p-section-head__title">SBS物流センター</h2>
+        </div>
+
+        <p style="font-size:15px; line-height:2; color:var(--color-text); margin-bottom:24px;">
+          <span class="u-underline">2025年4月に竣工</span>した、当社最新鋭の物流拠点。あらゆる物流ニーズに対応できる最先端設備を完備し、お客様の事業を力強くサポートします。
+        </p>
+
+        <div class="p-facility__features-list">
+          <div class="p-facility__feature">
+            <div class="p-facility__feature-title">高床式ホーム仕様</div>
+            <div class="p-facility__feature-text">トラックの荷台と倉庫床面が同じ高さで、荷役作業の効率化と安全性を両立。</div>
+          </div>
+          <div class="p-facility__feature">
+            <div class="p-facility__feature-title">可動式パレットラック</div>
+            <div class="p-facility__feature-text">保管効率を最大化し、多品種・小ロットの貨物にも柔軟に対応可能。</div>
+          </div>
+          <div class="p-facility__feature">
+            <div class="p-facility__feature-title">カーゴ用ドックレベラー</div>
+            <div class="p-facility__feature-text">トラックと倉庫の段差を解消し、フォークリフトでスムーズな積み下ろしが可能。</div>
+          </div>
+          <div class="p-facility__feature">
+            <div class="p-facility__feature-title">流通加工エリア完備</div>
+            <div class="p-facility__feature-text">検品、ラベル貼り、セット組などの付加価値作業も同センター内で実施。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-contact-cta">
+  <div class="l-container">
+    <div class="p-contact-cta__label">CONTACT</div>
+    <h2 class="p-contact-cta__title">最適な物流ソリューションを<br>ご提案いたします</h2>
+    <p class="p-contact-cta__text">
+      お客様の物流に関するお困りごと、お気軽にお問い合わせください。経験豊富なスタッフが、最適なプランをご提案いたします。
+    </p>
+    <a href="../contact/contact.html" class="c-btn c-btn--primary p-contact-cta__btn">
+      お問い合わせフォームへ <span class="c-btn__arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="l-footer">
+  <div class="l-container">
+    <div class="p-footer__top">
+      <div>
+        <div class="p-header__logo" style="color:#fff; margin-bottom:24px;">
+          <span class="p-header__logo-mark">SBS</span>
+          <span class="p-header__logo-text">
+            <small>SANIN LOGISTICS</small>
+            <strong>株式会社山陰物流サービス</strong>
+          </span>
+        </div>
+        <p class="p-footer__company-info">
+          〒699-0109 島根県松江市東出雲町錦浜583-19<br>
+          TEL: 0852-67-5566 / FAX: 0852-67-3300<br>
+          営業時間 平日 8:00 - 17:00
+        </p>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">SERVICES</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="warehouse.html" class="p-footer__nav-link">営業倉庫</a></li>
+          <li><a href="transport.html" class="p-footer__nav-link">幹線輸送</a></li>
+          <li><a href="services.html" class="p-footer__nav-link">業務内容トップ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">COMPANY</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="../about/about.html" class="p-footer__nav-link">会社概要</a></li>
+          <li><a href="../about/greeting.html" class="p-footer__nav-link">代表挨拶</a></li>
+          <li><a href="../about/history.html" class="p-footer__nav-link">沿革</a></li>
+          <li><a href="../news/news.html" class="p-footer__nav-link">お知らせ</a></li>
+          <li><a href="../recruit/recruit.html" class="p-footer__nav-link">採用情報</a></li>
+          <li><a href="../contact/contact.html" class="p-footer__nav-link">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-footer__bottom">
+      <div class="p-footer__copy">© 2025 株式会社山陰物流サービス All Rights Reserved.</div>
+      <div class="p-footer__legal">
+        <a href="#">個人情報保護方針</a>
+        <a href="#">サイトマップ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>

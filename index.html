@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社山陰物流サービス｜島根県松江市を拠点に、安全・確実・丁寧な一般貨物輸送、幹線輸送、物流倉庫業務を承ります。2003年創業、22年の信頼と実績。">
+<title>株式会社山陰物流サービス｜島根県松江市の総合物流企業</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/common.css">
+
+<style>
+/* ========================================
+   TOPページ固有スタイル
+======================================== */
+
+/* Hero (TOP page) */
+.p-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 640px;
+  overflow: hidden;
+  background: var(--color-bg-dark);
+}
+.p-hero__bg { position: absolute; inset: 0; z-index: 1; }
+.p-hero__bg img {
+  width: 100%; height: 100%; object-fit: cover;
+  animation: kenburns 20s ease-in-out infinite alternate;
+}
+@keyframes kenburns {
+  0% { transform: scale(1.05) translate(0, 0); }
+  100% { transform: scale(1.18) translate(-2%, -2%); }
+}
+.p-hero__overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(10,25,41,0.4) 0%, rgba(10,25,41,0.7) 100%),
+    linear-gradient(90deg, rgba(10,25,41,0.6) 0%, rgba(10,25,41,0.1) 60%);
+}
+.p-hero__grid {
+  position: absolute; inset: 0; z-index: 3;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px; pointer-events: none;
+}
+.p-hero__inner {
+  position: relative; z-index: 5; height: 100%;
+  display: flex; align-items: center;
+  padding: 0 24px;
+  max-width: 1600px; margin: 0 auto;
+}
+.p-hero__content {
+  width: 100%; max-width: 800px; color: #fff;
+  padding-top: var(--header-h);
+}
+.p-hero__label {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 8px 18px;
+  background: rgba(245, 166, 35, 0.15);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  border-radius: 999px;
+  color: var(--color-accent);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.2em;
+  margin-bottom: 32px;
+  font-family: var(--font-en);
+  opacity: 0; animation: fadeInUp 0.8s var(--ease-out) 0.2s forwards;
+}
+.p-hero__label::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--color-accent); border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+.p-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+.p-hero__title-line { display: block; overflow: hidden; }
+.p-hero__title-inner {
+  display: block;
+  transform: translateY(120%);
+  animation: revealUp 1s var(--ease-out) forwards;
+}
+.p-hero__title-line:nth-child(1) .p-hero__title-inner { animation-delay: 0.4s; }
+.p-hero__title-line:nth-child(2) .p-hero__title-inner { animation-delay: 0.6s; }
+.p-hero__title-line:nth-child(3) .p-hero__title-inner { animation-delay: 0.8s; }
+.p-hero__title-accent { color: var(--color-accent); }
+@keyframes revealUp { to { transform: translateY(0); } }
+
+.p-hero__lead {
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  line-height: 1.9;
+  margin-bottom: 40px;
+  opacity: 0;
+  max-width: 580px;
+  animation: fadeInUp 0.8s var(--ease-out) 1.2s forwards;
+}
+.p-hero__actions {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  opacity: 0; animation: fadeInUp 0.8s var(--ease-out) 1.4s forwards;
+}
+.p-hero__side {
+  position: absolute; right: 40px; bottom: 40px; z-index: 5;
+  display: none; flex-direction: column; gap: 24px; color: #fff;
+  opacity: 0; animation: fadeInUp 1s var(--ease-out) 1.6s forwards;
+}
+@media (min-width: 1024px) { .p-hero__side { display: flex; } }
+.p-hero__since { text-align: right; font-family: var(--font-en); }
+.p-hero__since-num {
+  font-size: 64px; line-height: 1;
+  color: var(--color-accent); letter-spacing: 0.05em;
+}
+.p-hero__since-label {
+  font-size: 11px; letter-spacing: 0.3em;
+  opacity: 0.8; margin-top: 8px;
+}
+.p-hero__scroll {
+  position: absolute; left: 50%; bottom: 32px;
+  transform: translateX(-50%); z-index: 5;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  color: #fff; font-family: var(--font-en);
+  font-size: 11px; letter-spacing: 0.4em;
+  opacity: 0; animation: fadeInUp 1s var(--ease-out) 2s forwards;
+}
+.p-hero__scroll-line {
+  width: 1px; height: 50px;
+  background: rgba(255, 255, 255, 0.4);
+  position: relative; overflow: hidden;
+}
+.p-hero__scroll-line::after {
+  content: ''; position: absolute;
+  top: -50%; left: 0; width: 100%; height: 50%;
+  background: var(--color-accent);
+  animation: scrollDown 2s ease-in-out infinite;
+}
+@keyframes scrollDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(200%); }
+}
+
+/* News Ticker */
+.p-news-ticker {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 16px 0;
+  overflow: hidden;
+}
+.p-news-ticker__inner {
+  display: flex; align-items: center; gap: 24px;
+  max-width: var(--container-max); margin: 0 auto;
+  padding: 0 24px;
+}
+.p-news-ticker__label {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 6px 14px;
+  background: var(--color-accent); color: var(--color-primary);
+  border-radius: 4px;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.1em;
+  font-family: var(--font-en);
+}
+.p-news-ticker__track { flex: 1; overflow: hidden; white-space: nowrap; }
+.p-news-ticker__list {
+  display: inline-flex; gap: 60px;
+  animation: tickerScroll 40s linear infinite;
+}
+.p-news-ticker__item {
+  display: inline-flex; align-items: center; gap: 16px;
+  font-size: 14px;
+}
+.p-news-ticker__date {
+  color: var(--color-accent);
+  font-family: var(--font-en);
+  font-size: 13px; letter-spacing: 0.1em;
+}
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* About */
+.p-about {
+  background: var(--color-bg-soft);
+  position: relative;
+  overflow: hidden;
+}
+.p-about::before {
+  content: 'ABOUT';
+  position: absolute;
+  top: 60px; right: -40px;
+  font-family: var(--font-en);
+  font-size: clamp(180px, 28vw, 360px);
+  color: rgba(10, 37, 64, 0.04);
+  font-weight: 900; line-height: 1;
+  pointer-events: none; letter-spacing: -0.03em;
+}
+.p-about__grid {
+  display: grid; grid-template-columns: 1fr; gap: 60px;
+  align-items: center; position: relative; z-index: 1;
+}
+@media (min-width: 1024px) {
+  .p-about__grid { grid-template-columns: 1fr 1.1fr; gap: 80px; }
+}
+.p-about__visual { position: relative; }
+.p-about__visual-main {
+  position: relative; aspect-ratio: 4/5;
+  overflow: hidden; border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(10, 37, 64, 0.15);
+}
+.p-about__visual-main img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+.p-about__visual:hover .p-about__visual-main img { transform: scale(1.06); }
+.p-about__visual-sub {
+  position: absolute; width: 50%; aspect-ratio: 4/3;
+  bottom: -40px; right: -20px;
+  overflow: hidden; border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.2);
+  border: 6px solid var(--color-bg-soft);
+}
+.p-about__visual-sub img { width: 100%; height: 100%; object-fit: cover; }
+.p-about__badge {
+  position: absolute; top: -30px; left: -30px;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: var(--color-accent); color: var(--color-primary);
+  display: grid; place-items: center; text-align: center;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(245, 166, 35, 0.4);
+  animation: rotate 20s linear infinite;
+}
+.p-about__badge-inner {
+  display: flex; flex-direction: column; align-items: center;
+  line-height: 1.1;
+}
+.p-about__badge-num { font-family: var(--font-en); font-size: 42px; letter-spacing: 0.05em; }
+.p-about__badge-label { font-size: 11px; letter-spacing: 0.15em; margin-top: 4px; }
+@keyframes rotate { to { transform: rotate(360deg); } }
+@media (max-width: 768px) {
+  .p-about__badge { width: 100px; height: 100px; top: -20px; left: -10px; }
+  .p-about__badge-num { font-size: 28px; }
+  .p-about__badge-label { font-size: 9px; }
+}
+.p-about__content { padding: 20px 0; }
+.p-about__copy {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.8; font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 32px; letter-spacing: 0.02em;
+}
+.p-about__text {
+  font-size: 15px; line-height: 2;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+}
+.p-about__stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; padding: 32px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 40px;
+}
+.p-about__stat-num {
+  font-family: var(--font-en);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-primary);
+  line-height: 1; letter-spacing: 0.02em;
+}
+.p-about__stat-num small {
+  font-size: 0.5em; color: var(--color-accent); margin-left: 4px;
+}
+.p-about__stat-label {
+  font-size: 12px; color: var(--color-text-light);
+  margin-top: 8px; letter-spacing: 0.05em;
+}
+
+/* Services (Bento Grid) */
+.p-services { background: #fff; }
+.p-services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .p-services__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .p-services__item:nth-child(1) {
+    grid-column: span 2; grid-row: span 2;
+  }
+}
+.p-services__item {
+  position: relative; overflow: hidden;
+  border-radius: 8px; aspect-ratio: 1/1;
+  background: var(--color-primary);
+  display: block;
+  transition: transform .5s var(--ease-out);
+}
+@media (min-width: 768px) {
+  .p-services__item:nth-child(1) { aspect-ratio: auto; }
+}
+.p-services__item:hover { transform: translateY(-8px); }
+.p-services__item-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.p-services__item:hover .p-services__item-img { transform: scale(1.1); }
+.p-services__item-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,37,64,0.1) 0%, rgba(10,37,64,0.85) 100%);
+  transition: background .5s;
+}
+.p-services__item:hover .p-services__item-overlay {
+  background: linear-gradient(180deg, rgba(10,37,64,0.3) 0%, rgba(10,37,64,0.92) 100%);
+}
+.p-services__item-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 24px; color: #fff; z-index: 2;
+}
+@media (min-width: 768px) {
+  .p-services__item:nth-child(1) .p-services__item-content { padding: 40px; }
+}
+.p-services__item-num {
+  font-family: var(--font-en);
+  font-size: 13px; color: var(--color-accent);
+  letter-spacing: 0.3em; margin-bottom: 8px; display: block;
+}
+.p-services__item-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 900; margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+.p-services__item:nth-child(1) .p-services__item-title {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+}
+.p-services__item-desc {
+  font-size: 13px; line-height: 1.7; opacity: 0.9; display: none;
+}
+@media (min-width: 768px) {
+  .p-services__item:nth-child(1) .p-services__item-desc { display: block; }
+}
+.p-services__item-arrow {
+  position: absolute; top: 24px; right: 24px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: grid; place-items: center;
+  color: #fff; z-index: 2;
+  transition: all .3s var(--ease-out);
+  backdrop-filter: blur(8px);
+}
+.p-services__item:hover .p-services__item-arrow {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+  transform: rotate(-45deg);
+}
+
+.p-services__view-all-wrap {
+  margin-top: 56px; text-align: center;
+}
+
+/* Features (3 Promises) */
+.p-features {
+  background: var(--color-primary);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.p-features::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 166, 35, 0.5), transparent);
+}
+.p-features__bg {
+  position: absolute; inset: 0; opacity: 0.06;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.p-features__head {
+  text-align: center; margin-bottom: 80px;
+  position: relative; z-index: 1;
+}
+.p-features__head .p-section-head__label { padding-left: 0; }
+.p-features__head .p-section-head__label::before { display: none; }
+.p-features__head .p-section-head__title { color: #fff; }
+.p-features__list {
+  display: grid; grid-template-columns: 1fr; gap: 40px;
+  position: relative; z-index: 1;
+}
+@media (min-width: 768px) {
+  .p-features__list { grid-template-columns: repeat(3, 1fr); gap: 48px; }
+}
+.p-features__item {
+  text-align: center; position: relative;
+  padding: 40px 24px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.p-features__item-num {
+  font-family: var(--font-en);
+  font-size: 14px; color: var(--color-accent);
+  letter-spacing: 0.4em; margin-bottom: 24px;
+}
+.p-features__item-icon {
+  width: 80px; height: 80px;
+  margin: 0 auto 24px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: rgba(245, 166, 35, 0.1);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  color: var(--color-accent);
+}
+.p-features__item-icon svg { width: 36px; height: 36px; }
+.p-features__item-title {
+  font-family: var(--font-serif);
+  font-size: 26px; font-weight: 900;
+  margin-bottom: 16px; letter-spacing: 0.08em;
+}
+.p-features__item-text {
+  font-size: 14px; line-height: 2; opacity: 0.85;
+}
+
+/* News */
+.p-news-section { background: var(--color-bg-soft); }
+.p-news-section__head {
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between; align-items: flex-end;
+  margin-bottom: 48px; gap: 24px;
+}
+.p-news-section__view-all {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 14px;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--color-primary);
+  transition: all .3s;
+}
+.p-news-section__view-all:hover {
+  color: var(--color-accent); border-color: var(--color-accent);
+  gap: 16px;
+}
+.p-news-section__list {
+  background: #fff; border-radius: 8px; overflow: hidden;
+  box-shadow: 0 10px 40px rgba(10, 37, 64, 0.06);
+}
+.p-news-section__item {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center; gap: 24px;
+  padding: 28px 32px;
+  border-bottom: 1px solid var(--color-border);
+  transition: background .3s;
+}
+.p-news-section__item:last-child { border-bottom: none; }
+.p-news-section__item:hover { background: var(--color-bg-soft); }
+@media (max-width: 768px) {
+  .p-news-section__item {
+    grid-template-columns: 1fr; gap: 8px; padding: 24px 20px;
+  }
+}
+.p-news-section__item-date {
+  font-family: var(--font-en);
+  font-size: 16px; color: var(--color-text-light);
+  letter-spacing: 0.1em; white-space: nowrap;
+}
+.p-news-section__item-cat {
+  display: inline-block;
+  padding: 4px 14px;
+  background: var(--color-primary); color: #fff;
+  border-radius: 999px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  white-space: nowrap; text-align: center;
+}
+.p-news-section__item-cat--important { background: var(--color-red); }
+.p-news-section__item-cat--new { background: var(--color-accent); color: var(--color-primary); }
+@media (max-width: 768px) {
+  .p-news-section__item-cat { justify-self: start; }
+}
+.p-news-section__item-title {
+  font-size: 15px; font-weight: 500;
+  color: var(--color-text); line-height: 1.6;
+}
+.p-news-section__item-arrow {
+  color: var(--color-text-light);
+  transition: transform .3s, color .3s;
+}
+.p-news-section__item:hover .p-news-section__item-arrow {
+  color: var(--color-accent); transform: translateX(6px);
+}
+@media (max-width: 768px) { .p-news-section__item-arrow { display: none; } }
+
+/* Recruit CTA */
+.p-recruit-cta {
+  position: relative; overflow: hidden; padding: 0;
+}
+.p-recruit-cta__inner {
+  position: relative; display: grid;
+  grid-template-columns: 1fr;
+  min-height: 540px;
+}
+@media (min-width: 1024px) {
+  .p-recruit-cta__inner { grid-template-columns: 1fr 1fr; }
+}
+.p-recruit-cta__visual { position: relative; overflow: hidden; min-height: 320px; }
+.p-recruit-cta__visual img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.p-recruit-cta:hover .p-recruit-cta__visual img { transform: scale(1.05); }
+.p-recruit-cta__visual::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(10, 37, 64, 0.3) 100%);
+}
+.p-recruit-cta__content {
+  background: var(--color-primary); color: #fff;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 40px; position: relative; overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .p-recruit-cta__content { padding: 100px 80px; }
+}
+.p-recruit-cta__content::before {
+  content: 'CAREER';
+  position: absolute; top: 40px; right: -20px;
+  font-family: var(--font-en);
+  font-size: 200px;
+  color: rgba(245, 166, 35, 0.06);
+  font-weight: 900; line-height: 1;
+  pointer-events: none; letter-spacing: -0.02em;
+}
+.p-recruit-cta__label {
+  font-family: var(--font-en);
+  font-size: 14px; color: var(--color-accent);
+  letter-spacing: 0.4em; margin-bottom: 24px;
+  position: relative; z-index: 1;
+}
+.p-recruit-cta__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900; line-height: 1.4;
+  margin-bottom: 24px;
+  position: relative; z-index: 1;
+}
+.p-recruit-cta__title em { font-style: normal; color: var(--color-accent); }
+.p-recruit-cta__text {
+  font-size: 15px; line-height: 2;
+  margin-bottom: 40px; opacity: 0.9;
+  position: relative; z-index: 1; max-width: 480px;
+}
+.p-recruit-cta__btn {
+  position: relative; z-index: 1;
+  align-self: flex-start;
+}
+
+/* Contact methods */
+.p-contact-methods-section { background: #fff; text-align: center; }
+.p-contact-methods-section__inner { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+.p-contact-methods-section__methods {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 720px; margin: 56px auto 0;
+}
+@media (min-width: 768px) {
+  .p-contact-methods-section__methods { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+.p-contact-method {
+  padding: 36px 28px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  transition: all .3s var(--ease-out);
+  text-align: left;
+}
+.p-contact-method:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.1);
+}
+.p-contact-method-label {
+  font-family: var(--font-en);
+  font-size: 12px; color: var(--color-accent);
+  letter-spacing: 0.3em; margin-bottom: 12px;
+}
+.p-contact-method-title {
+  font-size: 14px; color: var(--color-text-light); margin-bottom: 8px;
+}
+.p-contact-method-value {
+  font-family: var(--font-en);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--color-primary);
+  font-weight: 400; letter-spacing: 0.05em;
+  line-height: 1.2; margin-bottom: 4px;
+}
+.p-contact-method-sub { font-size: 12px; color: var(--color-text-light); }
+.p-contact-method--mail {
+  background: var(--color-primary);
+  border-color: var(--color-primary); color: #fff;
+}
+.p-contact-method--mail .p-contact-method-title { color: rgba(255,255,255,0.7); }
+.p-contact-method--mail .p-contact-method-value { color: #fff; }
+.p-contact-method--mail .p-contact-method-sub { color: rgba(255,255,255,0.7); }
+.p-contact-method--mail:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-accent);
+}
+.p-contact-method__arrow {
+  margin-top: 16px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<!-- ============= HEADER ============= -->
+<header class="l-header l-header--top" id="header">
+  <div class="p-header__inner">
+    <a href="index.html" class="p-header__logo">
+      <span class="p-header__logo-mark">SBS</span>
+      <span class="p-header__logo-text">
+        <small>SANIN LOGISTICS</small>
+        <strong>株式会社山陰物流サービス</strong>
+      </span>
+    </a>
+    <nav class="p-header__nav">
+      <ul class="p-header__nav-list">
+        <li><a href="about/about.html" class="p-header__nav-link">会社概要</a></li>
+        <li><a href="services/services.html" class="p-header__nav-link">業務内容</a></li>
+        <li><a href="news/news.html" class="p-header__nav-link">お知らせ</a></li>
+        <li><a href="recruit/recruit.html" class="p-header__nav-link">採用情報</a></li>
+      </ul>
+      <a href="contact/contact.html" class="p-header__cta">
+        お問い合わせ <span>→</span>
+      </a>
+    </nav>
+    <button class="p-header__menu-btn" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============= HERO ============= -->
+<section class="p-hero">
+  <div class="p-hero__bg">
+    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="走行する大型トラック">
+  </div>
+  <div class="p-hero__overlay"></div>
+  <div class="p-hero__grid"></div>
+  <div class="p-hero__inner">
+    <div class="p-hero__content">
+      <span class="p-hero__label">SAN-IN LOGISTICS SERVICE</span>
+      <h1 class="p-hero__title">
+        <span class="p-hero__title-line"><span class="p-hero__title-inner">山陰のモノを、</span></span>
+        <span class="p-hero__title-line"><span class="p-hero__title-inner">日本の未来へ</span></span>
+        <span class="p-hero__title-line"><span class="p-hero__title-inner p-hero__title-accent">運ぶ</span></span>
+      </h1>
+      <p class="p-hero__lead">
+        島根県松江市から、<span class="u-underline" style="text-decoration-color:#fff;">安全・確実・丁寧</span>な物流を。<br>
+        2003年創業、22年の信頼と実績。新たに竣工したSBS物流センターを核に、<br>
+        山陰エリアの社会的・経済的発展に貢献します。
+      </p>
+      <div class="p-hero__actions">
+        <a href="services/services.html" class="c-btn c-btn--primary">
+          業務内容を見る <span class="c-btn__arrow">→</span>
+        </a>
+        <a href="contact/contact.html" class="c-btn c-btn--ghost">
+          お問い合わせ <span class="c-btn__arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="p-hero__side">
+      <div class="p-hero__since">
+        <div class="p-hero__since-num">2003</div>
+        <div class="p-hero__since-label">SINCE — 22 YEARS</div>
+      </div>
+    </div>
+  </div>
+  <div class="p-hero__scroll">
+    <span>SCROLL</span>
+    <div class="p-hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============= NEWS TICKER ============= -->
+<div class="p-news-ticker">
+  <div class="p-news-ticker__inner">
+    <span class="p-news-ticker__label">NEWS</span>
+    <div class="p-news-ticker__track">
+      <div class="p-news-ticker__list">
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.04</span>SBS物流センターが竣工いたしました</span>
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.03</span>【金賞受賞】優秀安全運転事業所として表彰されました</span>
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.02</span>TSK 山陰中央TV「Alevel 8」にて当社が紹介されました</span>
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.01</span>従業員募集中｜未経験者歓迎・正社員登用あり</span>
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.04</span>SBS物流センターが竣工いたしました</span>
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.03</span>【金賞受賞】優秀安全運転事業所として表彰されました</span>
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.02</span>TSK 山陰中央TV「Alevel 8」にて当社が紹介されました</span>
+        <span class="p-news-ticker__item"><span class="p-news-ticker__date">2025.01</span>従業員募集中｜未経験者歓迎・正社員登用あり</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============= ABOUT ============= -->
+<section class="l-section p-about">
+  <div class="l-container">
+    <div class="p-about__grid">
+      <div class="p-about__visual js-reveal">
+        <div class="p-about__visual-main">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="物流倉庫の内観">
+        </div>
+        <div class="p-about__visual-sub">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="フォークリフト作業">
+        </div>
+        <div class="p-about__badge">
+          <div class="p-about__badge-inner">
+            <span class="p-about__badge-num">22+</span>
+            <span class="p-about__badge-label">YEARS OF<br>TRUST</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-about__content js-reveal" data-delay="1">
+        <div class="p-section-head" style="margin-bottom:32px;">
+          <span class="p-section-head__label">ABOUT US</span>
+          <h2 class="p-section-head__title">
+            山陰の物流を<br>
+            <em>支え続ける</em>22年。
+          </h2>
+        </div>
+        <p class="p-about__copy">
+          私たちは物流を通して、<br>
+          <span class="u-underline">山陰エリアの社会的・経済的発展</span>に<br>
+          貢献し続けます。
+        </p>
+        <p class="p-about__text">
+          株式会社山陰物流サービスは、2003年の創業以来、島根県松江市を拠点にトラックによる貨物運送・物流倉庫業務を中心に事業を展開してまいりました。22年間という長い時間を皆様と共に歩んでこられたことに感謝し、これからも一層の努力を重ね、ご期待に応えていけるよう邁進してまいります。
+        </p>
+        <div class="p-about__stats">
+          <div class="p-about__stat">
+            <div class="p-about__stat-num">22<small>年</small></div>
+            <div class="p-about__stat-label">創業からの実績</div>
+          </div>
+          <div class="p-about__stat">
+            <div class="p-about__stat-num">100<small>+</small></div>
+            <div class="p-about__stat-label">取引先企業</div>
+          </div>
+          <div class="p-about__stat">
+            <div class="p-about__stat-num">24<small>h</small></div>
+            <div class="p-about__stat-label">対応体制</div>
+          </div>
+        </div>
+        <a href="about/about.html" class="c-btn c-btn--primary">
+          会社概要を見る <span class="c-btn__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= SERVICES (Bento Grid) ============= -->
+<section class="l-section p-services">
+  <div class="l-container">
+    <div class="p-section-head js-reveal">
+      <span class="p-section-head__label">OUR SERVICES</span>
+      <h2 class="p-section-head__title">
+        多様なニーズに応える、<br>
+        <em>7つの物流ソリューション</em>
+      </h2>
+      <p class="p-section-head__lead">
+        一般貨物輸送から倉庫管理、物流代行まで。山陰物流サービスは、お客様のあらゆる物流ニーズにワンストップでお応えします。
+      </p>
+    </div>
+
+    <div class="p-services__grid js-reveal" data-delay="1">
+      <a href="services/warehouse.html" class="p-services__item">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="営業倉庫" class="p-services__item-img">
+        <div class="p-services__item-overlay"></div>
+        <div class="p-services__item-arrow">→</div>
+        <div class="p-services__item-content">
+          <span class="p-services__item-num">01 / FEATURED</span>
+          <h3 class="p-services__item-title">営業倉庫・物流センター</h3>
+          <p class="p-services__item-desc">2025年4月竣工の最新物流センター。高床式ホーム仕様、可動式パレットラック、カーゴ用ドックレベラーを完備し、保管から流通加工までワンストップで提供します。</p>
+        </div>
+      </a>
+      <a href="services/transport.html" class="p-services__item">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="幹線輸送" class="p-services__item-img">
+        <div class="p-services__item-overlay"></div>
+        <div class="p-services__item-arrow">→</div>
+        <div class="p-services__item-content"><span class="p-services__item-num">02</span><h3 class="p-services__item-title">幹線輸送</h3></div>
+      </a>
+      <a href="services/services.html" class="p-services__item">
+        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="一般貨物輸送" class="p-services__item-img">
+        <div class="p-services__item-overlay"></div>
+        <div class="p-services__item-arrow">→</div>
+        <div class="p-services__item-content"><span class="p-services__item-num">03</span><h3 class="p-services__item-title">一般貨物輸送</h3></div>
+      </a>
+      <a href="services/services.html" class="p-services__item">
+        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="定期輸送" class="p-services__item-img">
+        <div class="p-services__item-overlay"></div>
+        <div class="p-services__item-arrow">→</div>
+        <div class="p-services__item-content"><span class="p-services__item-num">04</span><h3 class="p-services__item-title">定期輸送</h3></div>
+      </a>
+      <a href="services/services.html" class="p-services__item">
+        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="付帯作業輸送" class="p-services__item-img">
+        <div class="p-services__item-overlay"></div>
+        <div class="p-services__item-arrow">→</div>
+        <div class="p-services__item-content"><span class="p-services__item-num">05</span><h3 class="p-services__item-title">付帯作業輸送</h3></div>
+      </a>
+      <a href="services/services.html" class="p-services__item">
+        <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="スポット輸送" class="p-services__item-img">
+        <div class="p-services__item-overlay"></div>
+        <div class="p-services__item-arrow">→</div>
+        <div class="p-services__item-content"><span class="p-services__item-num">06</span><h3 class="p-services__item-title">スポット輸送</h3></div>
+      </a>
+      <a href="services/services.html" class="p-services__item">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="物流代行" class="p-services__item-img">
+        <div class="p-services__item-overlay"></div>
+        <div class="p-services__item-arrow">→</div>
+        <div class="p-services__item-content"><span class="p-services__item-num">07</span><h3 class="p-services__item-title">物流代行</h3></div>
+      </a>
+    </div>
+
+    <div class="p-services__view-all-wrap js-reveal">
+      <a href="services/services.html" class="c-btn c-btn--outline">
+        業務内容一覧へ <span class="c-btn__arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FEATURES (3つの約束) ============= -->
+<section class="l-section p-features">
+  <div class="p-features__bg"></div>
+  <div class="l-container">
+    <div class="p-features__head js-reveal">
+      <span class="p-section-head__label">OUR PROMISE</span>
+      <h2 class="p-section-head__title">
+        私たちが大切にする<em>3つの約束</em>
+      </h2>
+    </div>
+    <div class="p-features__list">
+      <article class="p-features__item js-reveal" data-delay="1">
+        <div class="p-features__item-num">01 — SAFETY</div>
+        <div class="p-features__item-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="p-features__item-title">安 全</h3>
+        <p class="p-features__item-text">
+          優秀安全運転事業所として金賞を受賞。徹底した安全教育とドライバー管理で、お客様の大切な荷物を守ります。
+        </p>
+      </article>
+      <article class="p-features__item js-reveal" data-delay="2">
+        <div class="p-features__item-num">02 — RELIABILITY</div>
+        <div class="p-features__item-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="p-features__item-title">確 実</h3>
+        <p class="p-features__item-text">
+          22年の経験と最新鋭の物流センター設備で、納期厳守・品質保持を徹底。山陰エリアのお客様の信頼にお応えします。
+        </p>
+      </article>
+      <article class="p-features__item js-reveal" data-delay="3">
+        <div class="p-features__item-num">03 — CARE</div>
+        <div class="p-features__item-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="p-features__item-title">丁 寧</h3>
+        <p class="p-features__item-text">
+          経験豊富なスタッフが、お困りごとやご相談に丁寧にお応えします。一つひとつの荷物を、心を込めてお届けします。
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============= NEWS ============= -->
+<section class="l-section p-news-section">
+  <div class="l-container">
+    <div class="p-news-section__head">
+      <div class="p-section-head js-reveal" style="margin-bottom:0;">
+        <span class="p-section-head__label">INFORMATION</span>
+        <h2 class="p-section-head__title">お知らせ</h2>
+      </div>
+      <a href="news/news.html" class="p-news-section__view-all js-reveal" data-delay="1">VIEW ALL <span>→</span></a>
+    </div>
+    <div class="p-news-section__list js-reveal" data-delay="2">
+      <a href="news/news.html" class="p-news-section__item">
+        <span class="p-news-section__item-date">2025.04.01</span>
+        <span class="p-news-section__item-cat p-news-section__item-cat--important">重要</span>
+        <span class="p-news-section__item-title">SBS物流センター竣工のお知らせ｜ご挨拶（代表取締役 福田克己）</span>
+        <span class="p-news-section__item-arrow">→</span>
+      </a>
+      <a href="news/news.html" class="p-news-section__item">
+        <span class="p-news-section__item-date">2025.03.15</span>
+        <span class="p-news-section__item-cat">お知らせ</span>
+        <span class="p-news-section__item-title">【金賞受賞】優秀安全運転事業所として表彰されました</span>
+        <span class="p-news-section__item-arrow">→</span>
+      </a>
+      <a href="news/news.html" class="p-news-section__item">
+        <span class="p-news-section__item-date">2025.02.20</span>
+        <span class="p-news-section__item-cat">メディア</span>
+        <span class="p-news-section__item-title">【TSK 山陰中央TV】Alevel 8 にて当社が特集されました</span>
+        <span class="p-news-section__item-arrow">→</span>
+      </a>
+      <a href="news/news.html" class="p-news-section__item">
+        <span class="p-news-section__item-date">2025.01.10</span>
+        <span class="p-news-section__item-cat p-news-section__item-cat--new">NEW</span>
+        <span class="p-news-section__item-title">【従業員募集】じょぶる島根に求人情報を掲載中｜正社員登用あり</span>
+        <span class="p-news-section__item-arrow">→</span>
+      </a>
+      <a href="news/news.html" class="p-news-section__item">
+        <span class="p-news-section__item-date">2024.12.05</span>
+        <span class="p-news-section__item-cat">活動</span>
+        <span class="p-news-section__item-title">【スサノオマジック】搬入作業を担当いたしました</span>
+        <span class="p-news-section__item-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= RECRUIT CTA ============= -->
+<section class="p-recruit-cta">
+  <div class="p-recruit-cta__inner">
+    <div class="p-recruit-cta__visual">
+      <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="ドライバーの作業風景">
+    </div>
+    <div class="p-recruit-cta__content">
+      <span class="p-recruit-cta__label">RECRUIT — 採用情報</span>
+      <h2 class="p-recruit-cta__title js-reveal">
+        山陰の未来を、<br>
+        <em>共に運ぶ</em>仲間を募集中。
+      </h2>
+      <p class="p-recruit-cta__text js-reveal" data-delay="1">
+        私たちと一緒に、山陰の物流を支えませんか。<br>
+        未経験者歓迎・正社員登用あり。経験豊富な先輩スタッフが、あなたの成長を全力でサポートします。
+      </p>
+      <a href="recruit/recruit.html" class="c-btn c-btn--primary p-recruit-cta__btn js-reveal" data-delay="2">
+        採用情報を見る <span class="c-btn__arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CONTACT ============= -->
+<section class="l-section p-contact-methods-section">
+  <div class="p-contact-methods-section__inner">
+    <div class="js-reveal">
+      <div class="p-contact-cta__label" style="color:var(--color-accent);">CONTACT US</div>
+      <h2 class="p-section-head__title" style="margin-bottom:24px;">
+        お困りごとやご相談、<br>お気軽にお問い合わせください。
+      </h2>
+      <p style="font-size:15px; line-height:2; color:var(--color-text-light); max-width:640px; margin:0 auto;">
+        運送・物流に関するお困りごとやご相談等がございましたら、お気軽にお問い合わせください。<br>
+        <span class="u-underline">経験豊富なスタッフが丁寧にお応えいたします。</span>
+      </p>
+    </div>
+    <div class="p-contact-methods-section__methods">
+      <a href="tel:0852-67-5566" class="p-contact-method js-reveal" data-delay="1">
+        <div class="p-contact-method-label">BY PHONE</div>
+        <div class="p-contact-method-title">お電話でのお問い合わせ</div>
+        <div class="p-contact-method-value">0852-67-5566</div>
+        <div class="p-contact-method-sub">受付時間 平日 8:00 - 17:00</div>
+        <div class="p-contact-method__arrow">電話をかける →</div>
+      </a>
+      <a href="contact/contact.html" class="p-contact-method p-contact-method--mail js-reveal" data-delay="2">
+        <div class="p-contact-method-label">BY MAIL</div>
+        <div class="p-contact-method-title">フォームでのお問い合わせ</div>
+        <div class="p-contact-method-value" style="font-family:var(--font-jp); font-size:22px; font-weight:700;">24時間受付中</div>
+        <div class="p-contact-method-sub">お問い合わせフォームはこちら</div>
+        <div class="p-contact-method__arrow">フォームへ進む →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="l-footer">
+  <div class="l-container">
+    <div class="p-footer__top">
+      <div>
+        <div class="p-header__logo" style="color:#fff; margin-bottom:24px;">
+          <span class="p-header__logo-mark">SBS</span>
+          <span class="p-header__logo-text">
+            <small>SANIN LOGISTICS</small>
+            <strong>株式会社山陰物流サービス</strong>
+          </span>
+        </div>
+        <p class="p-footer__company-info">
+          〒699-0109 島根県松江市東出雲町錦浜583-19<br>
+          TEL: 0852-67-5566 / FAX: 0852-67-3300<br>
+          営業時間 平日 8:00 - 17:00
+        </p>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">SERVICES</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="services/services.html" class="p-footer__nav-link">業務内容トップ</a></li>
+          <li><a href="services/warehouse.html" class="p-footer__nav-link">営業倉庫</a></li>
+          <li><a href="services/transport.html" class="p-footer__nav-link">幹線輸送</a></li>
+          <li><a href="services/services.html" class="p-footer__nav-link">一般貨物輸送</a></li>
+          <li><a href="services/services.html" class="p-footer__nav-link">物流代行</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">COMPANY</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="about/about.html" class="p-footer__nav-link">会社概要</a></li>
+          <li><a href="about/greeting.html" class="p-footer__nav-link">代表挨拶</a></li>
+          <li><a href="about/history.html" class="p-footer__nav-link">沿革</a></li>
+          <li><a href="news/news.html" class="p-footer__nav-link">お知らせ</a></li>
+          <li><a href="recruit/recruit.html" class="p-footer__nav-link">採用情報</a></li>
+          <li><a href="contact/contact.html" class="p-footer__nav-link">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-footer__bottom">
+      <div class="p-footer__copy">© 2025 株式会社山陰物流サービス All Rights Reserved.</div>
+      <div class="p-footer__legal">
+        <a href="#">個人情報保護方針</a>
+        <a href="#">サイトマップ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/common.js"></script>
+</body>
+</html>

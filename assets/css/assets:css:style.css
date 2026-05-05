@@ -1,0 +1,62 @@
+/* 共通スタイル: 2026年 山陰物流サービス 仕様 */
+:root {
+    --primary-color: #00479d; /* 信頼のブルー */
+    --accent-color: #f7931e;  /* 活力のオレンジ */
+    --text-color: #333;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* ヘッダー共通 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px; /* logo-trans.png 用 */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* フッター共通 */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 3rem 5% 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 2rem;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #888;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+}

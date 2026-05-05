@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社山陰物流サービス 代表取締役 福田克己からのご挨拶｜山陰の物流を支える私たちの使命と決意。">
+<title>代表挨拶 | 株式会社山陰物流サービス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common.css">
+
+<style>
+.p-greeting { padding: 120px 0; background: #fff; position: relative; overflow: hidden; }
+@media (max-width: 768px) { .p-greeting { padding: 80px 0; } }
+.p-greeting::before {
+  content: 'GREETING';
+  position: absolute; top: 60px; right: -40px;
+  font-family: var(--font-en);
+  font-size: clamp(180px, 24vw, 320px);
+  color: rgba(10, 37, 64, 0.04);
+  font-weight: 900; line-height: 1;
+  pointer-events: none; letter-spacing: -0.03em;
+}
+.p-greeting__inner {
+  display: grid; grid-template-columns: 1fr; gap: 56px;
+  align-items: start;
+  position: relative; z-index: 1;
+}
+@media (min-width: 1024px) {
+  .p-greeting__inner { grid-template-columns: 0.9fr 1.3fr; gap: 80px; }
+}
+.p-greeting__visual { position: relative; }
+.p-greeting__visual-main {
+  position: relative; aspect-ratio: 4/5;
+  overflow: hidden; border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(10, 37, 64, 0.18);
+}
+.p-greeting__visual-main img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+.p-greeting__visual:hover .p-greeting__visual-main img { transform: scale(1.05); }
+.p-greeting__name-card {
+  position: absolute; bottom: -32px; left: -16px;
+  background: var(--color-primary); color: #fff;
+  padding: 24px 32px; border-radius: 4px;
+  box-shadow: 0 12px 32px rgba(10, 37, 64, 0.3);
+  border-left: 4px solid var(--color-accent);
+}
+.p-greeting__name-role {
+  font-family: var(--font-en);
+  font-size: 11px; letter-spacing: 0.3em;
+  color: var(--color-accent); margin-bottom: 8px;
+}
+.p-greeting__name-jp { font-size: 13px; opacity: 0.85; margin-bottom: 4px; }
+.p-greeting__name-name {
+  font-family: var(--font-serif);
+  font-size: 24px; font-weight: 900; letter-spacing: 0.05em;
+}
+.p-greeting__content { padding-top: 12px; }
+.p-greeting__copy {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.7; font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+  letter-spacing: 0.04em;
+}
+.p-greeting__text { font-size: 15px; line-height: 2.2; color: var(--color-text); }
+.p-greeting__text p { margin-bottom: 24px; }
+.p-greeting__text p:last-child { margin-bottom: 40px; }
+.p-greeting__sign {
+  margin-top: 32px; padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  display: flex; align-items: center; gap: 16px;
+}
+.p-greeting__sign-text { font-size: 14px; color: var(--color-text-light); }
+.p-greeting__sign-name {
+  font-family: var(--font-serif);
+  font-size: 22px; font-weight: 900;
+  color: var(--color-primary);
+}
+
+.p-philosophy {
+  background: var(--color-primary); color: #fff;
+  padding: 120px 0; position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .p-philosophy { padding: 80px 0; } }
+.p-philosophy::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px; pointer-events: none;
+}
+.p-philosophy__head {
+  text-align: center; margin-bottom: 80px;
+  position: relative; z-index: 1;
+}
+.p-philosophy__head .p-section-head__label { padding-left: 0; color: var(--color-accent); }
+.p-philosophy__head .p-section-head__label::before { display: none; }
+.p-philosophy__head .p-section-head__title { color: #fff; }
+.p-philosophy__values {
+  display: grid; grid-template-columns: 1fr; gap: 24px;
+  position: relative; z-index: 1;
+}
+@media (min-width: 768px) {
+  .p-philosophy__values { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+}
+.p-philosophy__item {
+  text-align: center; padding: 48px 32px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  transition: all .4s var(--ease-out);
+}
+.p-philosophy__item:hover {
+  background: rgba(245, 166, 35, 0.08);
+  border-color: rgba(245, 166, 35, 0.4);
+  transform: translateY(-6px);
+}
+.p-philosophy__item-num {
+  font-family: var(--font-en);
+  font-size: 56px; color: var(--color-accent);
+  line-height: 1; margin-bottom: 24px; letter-spacing: 0.05em;
+}
+.p-philosophy__item-title {
+  font-family: var(--font-serif);
+  font-size: 22px; font-weight: 900;
+  letter-spacing: 0.1em; margin-bottom: 16px;
+}
+.p-philosophy__item-text { font-size: 14px; line-height: 2; opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<header class="l-header">
+  <div class="p-header__inner">
+    <a href="../index.html" class="p-header__logo">
+      <span class="p-header__logo-mark">SBS</span>
+      <span class="p-header__logo-text">
+        <small>SANIN LOGISTICS</small>
+        <strong>株式会社山陰物流サービス</strong>
+      </span>
+    </a>
+    <nav class="p-header__nav">
+      <ul class="p-header__nav-list">
+        <li><a href="about.html" class="p-header__nav-link is-current">会社概要</a></li>
+        <li><a href="../services/services.html" class="p-header__nav-link">業務内容</a></li>
+        <li><a href="../news/news.html" class="p-header__nav-link">お知らせ</a></li>
+        <li><a href="../recruit/recruit.html" class="p-header__nav-link">採用情報</a></li>
+      </ul>
+      <a href="../contact/contact.html" class="p-header__cta">お問い合わせ <span>→</span></a>
+    </nav>
+    <button class="p-header__menu-btn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="p-page-hero">
+  <div class="p-page-hero__bg">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="夕暮れの物流拠点">
+  </div>
+  <div class="p-page-hero__overlay"></div>
+  <div class="p-page-hero__grid"></div>
+  <div class="p-page-hero__inner">
+    <span class="p-page-hero__label">GREETING</span>
+    <span class="p-page-hero__title-en">MESSAGE FROM CEO</span>
+    <h1 class="p-page-hero__title">代表挨拶</h1>
+    <nav class="p-page-hero__breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">HOME</a>
+      <span class="p-page-hero__breadcrumb-sep">▶</span>
+      <a href="about.html">会社概要</a>
+      <span class="p-page-hero__breadcrumb-sep">▶</span>
+      <span class="p-page-hero__breadcrumb-current">代表挨拶</span>
+    </nav>
+  </div>
+</section>
+
+<section class="p-greeting">
+  <div class="l-container">
+    <div class="p-greeting__inner">
+      <div class="p-greeting__visual js-reveal">
+        <div class="p-greeting__visual-main">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="代表取締役 福田克己">
+        </div>
+        <div class="p-greeting__name-card">
+          <div class="p-greeting__name-role">REPRESENTATIVE DIRECTOR</div>
+          <div class="p-greeting__name-jp">代表取締役</div>
+          <div class="p-greeting__name-name">福田 克己</div>
+        </div>
+      </div>
+
+      <div class="p-greeting__content js-reveal" data-delay="1">
+        <div class="p-section-head" style="margin-bottom:32px;">
+          <span class="p-section-head__label">MESSAGE</span>
+          <h2 class="p-section-head__title" style="font-size:clamp(1.6rem, 3vw, 2.2rem);">ご挨拶</h2>
+        </div>
+
+        <p class="p-greeting__copy">
+          物流を通して、<br>
+          <span class="u-underline">山陰エリアの社会的・経済的発展</span>に<br>
+          貢献し続けます。
+        </p>
+
+        <div class="p-greeting__text">
+          <p>
+            平素より格別のご高配を賜り、誠にありがとうございます。<br>
+            株式会社山陰物流サービスは、<span class="u-underline">2003年の創業以来、島根県松江市を拠点にトラックによる貨物運送・物流倉庫業務</span>を中心に事業を展開してまいりました。
+          </p>
+          <p>
+            22年間という長い時間を皆様と共に歩んでこられたことに、心より感謝申し上げます。これも偏にお客様、お取引先様、地域の皆様、そして社員一人ひとりの支えがあってこそと存じます。
+          </p>
+          <p>
+            <span class="u-underline">2025年4月には新たに「SBS物流センター」が竣工</span>し、保管から流通加工、配送まで一貫してご提供できる体制が整いました。最新鋭の設備と長年培った経験を融合させ、より高品質で柔軟な物流サービスをお届けしてまいります。
+          </p>
+          <p>
+            私たちの使命は、物流という社会インフラを通じて、山陰エリアの社会的・経済的発展に貢献することです。<span class="u-underline">「安全・確実・丁寧」という3つの約束</span>を胸に、これからも一層の努力を重ね、皆様のご期待に応えてまいる所存です。
+          </p>
+          <p>
+            今後とも変わらぬご支援、ご鞭撻を賜りますよう、心よりお願い申し上げます。
+          </p>
+        </div>
+
+        <div class="p-greeting__sign">
+          <div class="p-greeting__sign-text">株式会社山陰物流サービス<br>代表取締役</div>
+          <div class="p-greeting__sign-name">福田 克己</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-philosophy">
+  <div class="l-container">
+    <div class="p-philosophy__head js-reveal">
+      <span class="p-section-head__label">OUR PHILOSOPHY</span>
+      <h2 class="p-section-head__title">
+        私たちが大切にする<em style="color:var(--color-accent);">3つの約束</em>
+      </h2>
+    </div>
+
+    <div class="p-philosophy__values">
+      <div class="p-philosophy__item js-reveal" data-delay="1">
+        <div class="p-philosophy__item-num">01</div>
+        <h3 class="p-philosophy__item-title">安 全</h3>
+        <p class="p-philosophy__item-text">
+          お客様の大切な荷物を、無事故・無故障で確実にお届けする。優秀安全運転事業所として金賞を受賞した実績が、私たちの誇りです。
+        </p>
+      </div>
+      <div class="p-philosophy__item js-reveal" data-delay="2">
+        <div class="p-philosophy__item-num">02</div>
+        <h3 class="p-philosophy__item-title">確 実</h3>
+        <p class="p-philosophy__item-text">
+          22年の経験と最新鋭の物流センター設備で、納期厳守・品質保持を徹底する。山陰エリアのお客様の信頼にお応えします。
+        </p>
+      </div>
+      <div class="p-philosophy__item js-reveal" data-delay="3">
+        <div class="p-philosophy__item-num">03</div>
+        <h3 class="p-philosophy__item-title">丁 寧</h3>
+        <p class="p-philosophy__item-text">
+          経験豊富なスタッフが、お困りごとやご相談に丁寧にお応えします。一つひとつの荷物を、心を込めてお届けします。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-side-nav">
+  <div class="l-container">
+    <div class="p-section-head p-section-head--center js-reveal">
+      <span class="p-section-head__label">RELATED PAGES</span>
+      <h2 class="p-section-head__title">関連ページ</h2>
+    </div>
+
+    <div class="p-side-nav__list js-reveal" data-delay="1">
+      <a href="about.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="会社概要" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">会社概要</div><span class="p-side-nav__text-en">OVERVIEW</span></div>
+      </a>
+      <a href="history.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1586528116493-a029325540fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="沿革" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">沿革</div><span class="p-side-nav__text-en">HISTORY</span></div>
+      </a>
+      <a href="../services/services.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="業務内容" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">業務内容</div><span class="p-side-nav__text-en">SERVICES</span></div>
+      </a>
+      <a href="../recruit/recruit.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="採用情報" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">採用情報</div><span class="p-side-nav__text-en">RECRUIT</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="p-contact-cta">
+  <div class="l-container">
+    <div class="p-contact-cta__label">CONTACT</div>
+    <h2 class="p-contact-cta__title">お困りごとやご相談、<br>お気軽にお問い合わせください</h2>
+    <p class="p-contact-cta__text">
+      運送・物流に関するお困りごとやご相談等がございましたら、お気軽にお問い合わせください。経験豊富なスタッフが丁寧にお応えいたします。
+    </p>
+    <a href="../contact/contact.html" class="c-btn c-btn--primary p-contact-cta__btn">
+      お問い合わせフォームへ <span class="c-btn__arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="l-footer">
+  <div class="l-container">
+    <div class="p-footer__top">
+      <div>
+        <div class="p-header__logo" style="color:#fff; margin-bottom:24px;">
+          <span class="p-header__logo-mark">SBS</span>
+          <span class="p-header__logo-text">
+            <small>SANIN LOGISTICS</small>
+            <strong>株式会社山陰物流サービス</strong>
+          </span>
+        </div>
+        <p class="p-footer__company-info">
+          〒699-0109 島根県松江市東出雲町錦浜583-19<br>
+          TEL: 0852-67-5566 / FAX: 0852-67-3300<br>
+          営業時間 平日 8:00 - 17:00
+        </p>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">SERVICES</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="../services/services.html" class="p-footer__nav-link">業務内容トップ</a></li>
+          <li><a href="../services/warehouse.html" class="p-footer__nav-link">営業倉庫</a></li>
+          <li><a href="../services/transport.html" class="p-footer__nav-link">幹線輸送</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">COMPANY</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="about.html" class="p-footer__nav-link">会社概要</a></li>
+          <li><a href="greeting.html" class="p-footer__nav-link">代表挨拶</a></li>
+          <li><a href="history.html" class="p-footer__nav-link">沿革</a></li>
+          <li><a href="../news/news.html" class="p-footer__nav-link">お知らせ</a></li>
+          <li><a href="../recruit/recruit.html" class="p-footer__nav-link">採用情報</a></li>
+          <li><a href="../contact/contact.html" class="p-footer__nav-link">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-footer__bottom">
+      <div class="p-footer__copy">© 2025 株式会社山陰物流サービス All Rights Reserved.</div>
+      <div class="p-footer__legal">
+        <a href="#">個人情報保護方針</a>
+        <a href="#">サイトマップ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>

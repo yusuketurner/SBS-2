@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社山陰物流サービスの採用情報｜地域の未来を動かす仕事へ。未経験者歓迎・正社員登用あり。トラックドライバー、倉庫スタッフ、配車係、事務スタッフを募集中。">
+<title>採用情報 | 株式会社山陰物流サービス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common.css">
+
+<style>
+/* Recruit Hero - Custom (full-screen) */
+.p-recruit-hero {
+  position: relative; width: 100%;
+  height: 90vh; min-height: 600px;
+  overflow: hidden; background: var(--color-bg-dark);
+}
+.p-recruit-hero__bg { position: absolute; inset: 0; z-index: 1; }
+.p-recruit-hero__bg img {
+  width: 100%; height: 100%; object-fit: cover;
+  animation: kenburns 18s ease-in-out infinite alternate;
+}
+@keyframes kenburns {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.18); }
+}
+.p-recruit-hero__overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(10,25,41,0.5) 0%, rgba(10,25,41,0.75) 100%),
+    linear-gradient(90deg, rgba(10,25,41,0.6) 0%, rgba(10,25,41,0.2) 60%);
+}
+.p-recruit-hero__grid {
+  position: absolute; inset: 0; z-index: 3;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px; pointer-events: none;
+}
+.p-recruit-hero__inner {
+  position: relative; z-index: 5; height: 100%;
+  display: flex; align-items: center;
+  padding: 0 24px;
+  max-width: 1600px; margin: 0 auto;
+  color: #fff;
+}
+@media (min-width: 768px) { .p-recruit-hero__inner { padding: 0 40px; } }
+.p-recruit-hero__content {
+  width: 100%; max-width: 900px;
+  padding-top: var(--header-h);
+}
+.p-recruit-hero__label {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 8px 18px;
+  background: rgba(245, 166, 35, 0.15);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  border-radius: 999px;
+  color: var(--color-accent);
+  font-family: var(--font-en);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.3em;
+  margin-bottom: 32px;
+  opacity: 0; animation: fadeInUp 0.8s var(--ease-out) 0.2s forwards;
+}
+.p-recruit-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 6.5vw, 5.6rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+.p-recruit-hero__title-line { display: block; overflow: hidden; }
+.p-recruit-hero__title-inner {
+  display: block;
+  transform: translateY(120%);
+  animation: revealUp 1s var(--ease-out) forwards;
+}
+.p-recruit-hero__title-line:nth-child(1) .p-recruit-hero__title-inner { animation-delay: 0.4s; }
+.p-recruit-hero__title-line:nth-child(2) .p-recruit-hero__title-inner { animation-delay: 0.6s; }
+.p-recruit-hero__title-accent { color: var(--color-accent); }
+@keyframes revealUp { to { transform: translateY(0); } }
+
+.p-recruit-hero__lead {
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  line-height: 2;
+  margin-bottom: 40px;
+  max-width: 640px;
+  opacity: 0; animation: fadeInUp 0.8s var(--ease-out) 1.2s forwards;
+}
+.p-recruit-hero__breadcrumb {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  font-size: 13px; letter-spacing: 0.05em;
+  margin-top: 24px;
+  opacity: 0; animation: fadeInUp 0.8s var(--ease-out) 1.4s forwards;
+}
+.p-recruit-hero__breadcrumb a { opacity: 0.8; transition: all .3s; }
+.p-recruit-hero__breadcrumb a:hover { color: var(--color-accent); opacity: 1; }
+.p-recruit-hero__breadcrumb-sep { color: rgba(255,255,255,0.4); font-size: 11px; }
+.p-recruit-hero__breadcrumb-current { color: var(--color-accent); }
+
+/* Message section */
+.p-message { padding: 120px 0; background: #fff; position: relative; overflow: hidden; }
+@media (max-width: 768px) { .p-message { padding: 80px 0; } }
+.p-message::before {
+  content: 'MESSAGE';
+  position: absolute; top: 60px; right: -40px;
+  font-family: var(--font-en);
+  font-size: clamp(160px, 24vw, 320px);
+  color: rgba(10, 37, 64, 0.04);
+  font-weight: 900; line-height: 1;
+  pointer-events: none; letter-spacing: -0.03em;
+}
+.p-message__inner {
+  display: grid; grid-template-columns: 1fr; gap: 56px;
+  align-items: center; position: relative; z-index: 1;
+}
+@media (min-width: 1024px) {
+  .p-message__inner { grid-template-columns: 1fr 1.2fr; gap: 80px; }
+}
+.p-message__visual {
+  aspect-ratio: 4/5; overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(10, 37, 64, 0.15);
+}
+.p-message__visual img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+.p-message:hover .p-message__visual img { transform: scale(1.05); }
+.p-message__copy {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.7; font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+}
+.p-message__text {
+  font-size: 15px; line-height: 2;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+/* Numbers */
+.p-recruit-numbers {
+  background: var(--color-primary); color: #fff;
+  padding: 100px 0; position: relative; overflow: hidden;
+}
+.p-recruit-numbers::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.p-recruit-numbers__head {
+  text-align: center; margin-bottom: 64px;
+  position: relative; z-index: 1;
+}
+.p-recruit-numbers__head .p-section-head__label { padding-left: 0; color: var(--color-accent); }
+.p-recruit-numbers__head .p-section-head__label::before { display: none; }
+.p-recruit-numbers__head .p-section-head__title { color: #fff; }
+.p-recruit-numbers__list {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 24px; position: relative; z-index: 1;
+}
+@media (min-width: 768px) { .p-recruit-numbers__list { grid-template-columns: repeat(4, 1fr); } }
+.p-recruit-numbers__item {
+  text-align: center; padding: 32px 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  transition: all .3s;
+}
+.p-recruit-numbers__item:hover {
+  border-color: rgba(245, 166, 35, 0.4);
+  background: rgba(245, 166, 35, 0.06);
+  transform: translateY(-4px);
+}
+.p-recruit-numbers__num {
+  font-family: var(--font-en);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--color-accent); line-height: 1;
+  letter-spacing: 0.02em; margin-bottom: 12px;
+}
+.p-recruit-numbers__num small {
+  font-size: 0.4em; color: rgba(255,255,255,0.7);
+  margin-left: 4px; vertical-align: baseline;
+}
+.p-recruit-numbers__label { font-size: 12px; letter-spacing: 0.1em; opacity: 0.8; }
+
+/* Jobs */
+.p-jobs { padding: 120px 0; background: var(--color-bg-soft); }
+@media (max-width: 768px) { .p-jobs { padding: 80px 0; } }
+.p-jobs__list {
+  display: grid; grid-template-columns: 1fr; gap: 24px;
+}
+@media (min-width: 768px) { .p-jobs__list { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.p-jobs__item {
+  background: #fff; border-radius: 8px;
+  overflow: hidden;
+  border-top: 4px solid var(--color-accent);
+  transition: all .4s var(--ease-out);
+}
+.p-jobs__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.12);
+}
+.p-jobs__item-img {
+  aspect-ratio: 16/10; overflow: hidden; position: relative;
+}
+.p-jobs__item-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .8s var(--ease-out);
+}
+.p-jobs__item:hover .p-jobs__item-img img { transform: scale(1.08); }
+.p-jobs__item-tag {
+  position: absolute; top: 16px; left: 16px;
+  padding: 6px 14px;
+  background: var(--color-accent); color: var(--color-primary);
+  font-family: var(--font-en);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.2em;
+  border-radius: 4px;
+}
+.p-jobs__item-content { padding: 32px 28px; }
+.p-jobs__item-en {
+  font-family: var(--font-en);
+  font-size: 12px; color: var(--color-accent);
+  letter-spacing: 0.3em; margin-bottom: 8px;
+}
+.p-jobs__item-title {
+  font-family: var(--font-serif);
+  font-size: 24px; font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.p-jobs__item-text {
+  font-size: 14px; line-height: 2;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+.p-jobs__item-conditions {
+  display: grid; grid-template-columns: 1fr;
+  gap: 8px; padding: 20px; margin-bottom: 24px;
+  background: var(--color-bg-soft);
+  border-radius: 4px;
+}
+.p-jobs__item-condition {
+  display: grid; grid-template-columns: 90px 1fr;
+  gap: 12px; font-size: 13px;
+}
+.p-jobs__item-condition dt {
+  color: var(--color-text-light); font-weight: 500;
+}
+.p-jobs__item-condition dd {
+  color: var(--color-text); font-weight: 500;
+}
+
+/* Sub Pages CTA Banner */
+.p-recruit-banner {
+  display: grid; grid-template-columns: 1fr; gap: 24px;
+  padding: 80px 0;
+  background: var(--color-bg-soft);
+}
+@media (min-width: 768px) {
+  .p-recruit-banner { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+.p-recruit-banner__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+.p-recruit-banner__grid {
+  display: grid; grid-template-columns: 1fr; gap: 24px;
+}
+@media (min-width: 768px) {
+  .p-recruit-banner__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+.p-recruit-banner__item {
+  position: relative; aspect-ratio: 16/9;
+  border-radius: 8px; overflow: hidden;
+  background: var(--color-primary);
+  display: block;
+  transition: all .4s var(--ease-out);
+}
+.p-recruit-banner__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.2);
+}
+.p-recruit-banner__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.p-recruit-banner__item:hover .p-recruit-banner__img { transform: scale(1.06); }
+.p-recruit-banner__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,37,64,0.5) 0%, rgba(10,37,64,0.85) 100%);
+}
+.p-recruit-banner__content {
+  position: absolute; inset: 0;
+  padding: 32px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  color: #fff;
+}
+.p-recruit-banner__en {
+  font-family: var(--font-en);
+  font-size: 13px; color: var(--color-accent);
+  letter-spacing: 0.3em; margin-bottom: 8px;
+}
+.p-recruit-banner__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  font-weight: 900; margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.p-recruit-banner__text {
+  font-size: 13px; opacity: 0.85;
+  margin-bottom: 16px;
+}
+.p-recruit-banner__btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-weight: 700; font-size: 13px;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-accent);
+  width: fit-content;
+  transition: gap .3s;
+}
+.p-recruit-banner__item:hover .p-recruit-banner__btn { gap: 16px; }
+
+/* Benefits */
+.p-benefits { padding: 120px 0; background: #fff; }
+@media (max-width: 768px) { .p-benefits { padding: 80px 0; } }
+.p-benefits__list {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 768px) { .p-benefits__list { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
+.p-benefits__item {
+  padding: 32px 24px; text-align: center;
+  background: var(--color-bg-soft);
+  border-radius: 8px;
+  transition: all .3s var(--ease-out);
+}
+.p-benefits__item:hover {
+  background: var(--color-primary); color: #fff;
+  transform: translateY(-4px);
+}
+.p-benefits__item:hover .p-benefits__item-title { color: #fff; }
+.p-benefits__item:hover .p-benefits__item-icon {
+  background: var(--color-accent); color: var(--color-primary);
+}
+.p-benefits__item-icon {
+  width: 60px; height: 60px;
+  margin: 0 auto 16px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: rgba(245, 166, 35, 0.1);
+  color: var(--color-accent);
+  transition: all .3s;
+}
+.p-benefits__item-icon svg { width: 28px; height: 28px; }
+.p-benefits__item-title {
+  font-family: var(--font-serif);
+  font-size: 15px; font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  transition: color .3s;
+}
+.p-benefits__item-text {
+  font-size: 12px; line-height: 1.7;
+  opacity: 0.85;
+}
+</style>
+</head>
+<body>
+
+<header class="l-header">
+  <div class="p-header__inner">
+    <a href="../index.html" class="p-header__logo">
+      <span class="p-header__logo-mark">SBS</span>
+      <span class="p-header__logo-text">
+        <small>SANIN LOGISTICS</small>
+        <strong>株式会社山陰物流サービス</strong>
+      </span>
+    </a>
+    <nav class="p-header__nav">
+      <ul class="p-header__nav-list">
+        <li><a href="../about/about.html" class="p-header__nav-link">会社概要</a></li>
+        <li><a href="../services/services.html" class="p-header__nav-link">業務内容</a></li>
+        <li><a href="../news/news.html" class="p-header__nav-link">お知らせ</a></li>
+        <li><a href="recruit.html" class="p-header__nav-link is-current">採用情報</a></li>
+      </ul>
+      <a href="../contact/contact.html" class="p-header__cta">お問い合わせ <span>→</span></a>
+    </nav>
+    <button class="p-header__menu-btn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="p-recruit-hero">
+  <div class="p-recruit-hero__bg">
+    <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="ドライバーの作業風景">
+  </div>
+  <div class="p-recruit-hero__overlay"></div>
+  <div class="p-recruit-hero__grid"></div>
+  <div class="p-recruit-hero__inner">
+    <div class="p-recruit-hero__content">
+      <span class="p-recruit-hero__label">JOIN US — RECRUIT 2025</span>
+      <h1 class="p-recruit-hero__title">
+        <span class="p-recruit-hero__title-line"><span class="p-recruit-hero__title-inner">地域の未来を、</span></span>
+        <span class="p-recruit-hero__title-line"><span class="p-recruit-hero__title-inner p-recruit-hero__title-accent">動かす仕事へ。</span></span>
+      </h1>
+      <p class="p-recruit-hero__lead">
+        山陰の物流を支える私たちと一緒に、地域の社会インフラを支える仕事を始めませんか。<br>
+        <span class="u-underline" style="text-decoration-color:#fff;">未経験者歓迎・正社員登用あり</span>。経験豊富な先輩スタッフが、あなたの成長を全力でサポートします。
+      </p>
+      <nav class="p-recruit-hero__breadcrumb" aria-label="パンくずリスト">
+        <a href="../index.html">HOME</a>
+        <span class="p-recruit-hero__breadcrumb-sep">▶</span>
+        <span class="p-recruit-hero__breadcrumb-current">採用情報</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class="p-message">
+  <div class="l-container">
+    <div class="p-message__inner">
+      <div class="p-message__visual js-reveal">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="代表取締役 福田克己">
+      </div>
+      <div class="js-reveal" data-delay="1">
+        <div class="p-section-head" style="margin-bottom:32px;">
+          <span class="p-section-head__label">CEO MESSAGE</span>
+          <h2 class="p-section-head__title" style="font-size:clamp(1.6rem, 3vw, 2.2rem);">
+            代表からのメッセージ
+          </h2>
+        </div>
+        <p class="p-message__copy">
+          あなたの可能性を、<br>
+          <span class="u-underline">山陰の地で</span>花開かせよう。
+        </p>
+        <p class="p-message__text">
+          私たち山陰物流サービスは、22年間にわたり山陰エリアの物流を支えてきました。物流という仕事は、単なる「モノを運ぶ仕事」ではありません。<span class="u-underline">地域社会を支える、なくてはならない社会インフラ</span>です。
+        </p>
+        <p class="p-message__text">
+          経験はもちろん大切ですが、それ以上に大切なのは「人と地域を支えたい」という想い。当社では、未経験から始めて活躍している社員がたくさんいます。先輩たちが温かくサポートしますので、安心して飛び込んできてください。
+        </p>
+        <p class="p-message__text" style="margin-top:32px; font-weight:700; color:var(--color-primary);">
+          代表取締役　福田 克己
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-recruit-numbers">
+  <div class="l-container">
+    <div class="p-recruit-numbers__head js-reveal">
+      <span class="p-section-head__label">DATA</span>
+      <h2 class="p-section-head__title">数字で見る、私たちの会社</h2>
+    </div>
+    <div class="p-recruit-numbers__list">
+      <div class="p-recruit-numbers__item js-reveal" data-delay="1">
+        <div class="p-recruit-numbers__num">22<small>年</small></div>
+        <div class="p-recruit-numbers__label">創業からの実績</div>
+      </div>
+      <div class="p-recruit-numbers__item js-reveal" data-delay="2">
+        <div class="p-recruit-numbers__num">50<small>名</small></div>
+        <div class="p-recruit-numbers__label">従業員数</div>
+      </div>
+      <div class="p-recruit-numbers__item js-reveal" data-delay="3">
+        <div class="p-recruit-numbers__num">42<small>歳</small></div>
+        <div class="p-recruit-numbers__label">平均年齢</div>
+      </div>
+      <div class="p-recruit-numbers__item js-reveal" data-delay="4">
+        <div class="p-recruit-numbers__num">12<small>年</small></div>
+        <div class="p-recruit-numbers__label">平均勤続年数</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-jobs">
+  <div class="l-container">
+    <div class="p-section-head js-reveal">
+      <span class="p-section-head__label">JOB OPENINGS</span>
+      <h2 class="p-section-head__title">
+        募集職種
+      </h2>
+      <p class="p-section-head__lead">
+        <span class="u-underline">未経験者歓迎・正社員登用あり</span>。あなたの強みを活かせる職種をお選びください。
+      </p>
+    </div>
+
+    <div class="p-jobs__list">
+      <article class="p-jobs__item js-reveal" data-delay="1">
+        <div class="p-jobs__item-img">
+          <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="トラックドライバー">
+          <span class="p-jobs__item-tag">DRIVER</span>
+        </div>
+        <div class="p-jobs__item-content">
+          <div class="p-jobs__item-en">JOB 01 — DRIVER</div>
+          <h3 class="p-jobs__item-title">トラックドライバー</h3>
+          <p class="p-jobs__item-text">
+            山陰エリアを中心に、関西・山陽・中国地方への幹線輸送業務をお任せします。経験者はもちろん、未経験の方も先輩ドライバーが丁寧に指導いたします。
+          </p>
+          <dl class="p-jobs__item-conditions">
+            <div class="p-jobs__item-condition"><dt>雇用形態</dt><dd>正社員</dd></div>
+            <div class="p-jobs__item-condition"><dt>勤務地</dt><dd>松江市東出雲町</dd></div>
+            <div class="p-jobs__item-condition"><dt>必要資格</dt><dd>大型自動車免許（取得支援あり）</dd></div>
+            <div class="p-jobs__item-condition"><dt>給与</dt><dd>月給28万円〜（経験により優遇）</dd></div>
+          </dl>
+          <a href="../contact/contact.html" class="c-btn c-btn--outline" style="font-size:13px; padding:14px 24px;">
+            この職種に応募する <span class="c-btn__arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="p-jobs__item js-reveal" data-delay="2">
+        <div class="p-jobs__item-img">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="倉庫スタッフ">
+          <span class="p-jobs__item-tag">WAREHOUSE</span>
+        </div>
+        <div class="p-jobs__item-content">
+          <div class="p-jobs__item-en">JOB 02 — WAREHOUSE STAFF</div>
+          <h3 class="p-jobs__item-title">倉庫スタッフ</h3>
+          <p class="p-jobs__item-text">
+            SBS物流センターでの保管・流通加工・出荷業務。フォークリフトでの荷役作業や、検品・ラベル貼りなどの加工作業をお任せします。
+          </p>
+          <dl class="p-jobs__item-conditions">
+            <div class="p-jobs__item-condition"><dt>雇用形態</dt><dd>正社員／パート</dd></div>
+            <div class="p-jobs__item-condition"><dt>勤務地</dt><dd>SBS物流センター</dd></div>
+            <div class="p-jobs__item-condition"><dt>必要資格</dt><dd>フォークリフト免許（取得支援あり）</dd></div>
+            <div class="p-jobs__item-condition"><dt>給与</dt><dd>月給22万円〜／時給1,050円〜</dd></div>
+          </dl>
+          <a href="../contact/contact.html" class="c-btn c-btn--outline" style="font-size:13px; padding:14px 24px;">
+            この職種に応募する <span class="c-btn__arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="p-jobs__item js-reveal" data-delay="3">
+        <div class="p-jobs__item-img">
+          <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="配車・運行管理">
+          <span class="p-jobs__item-tag">DISPATCH</span>
+        </div>
+        <div class="p-jobs__item-content">
+          <div class="p-jobs__item-en">JOB 03 — DISPATCHER</div>
+          <h3 class="p-jobs__item-title">配車・運行管理担当</h3>
+          <p class="p-jobs__item-text">
+            ドライバーの配車計画立案、運行ルートの最適化、お客様との調整業務など、物流の司令塔としてご活躍いただきます。
+          </p>
+          <dl class="p-jobs__item-conditions">
+            <div class="p-jobs__item-condition"><dt>雇用形態</dt><dd>正社員</dd></div>
+            <div class="p-jobs__item-condition"><dt>勤務地</dt><dd>本社</dd></div>
+            <div class="p-jobs__item-condition"><dt>必要資格</dt><dd>運行管理者（取得支援あり）</dd></div>
+            <div class="p-jobs__item-condition"><dt>給与</dt><dd>月給26万円〜（経験により優遇）</dd></div>
+          </dl>
+          <a href="../contact/contact.html" class="c-btn c-btn--outline" style="font-size:13px; padding:14px 24px;">
+            この職種に応募する <span class="c-btn__arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="p-jobs__item js-reveal" data-delay="4">
+        <div class="p-jobs__item-img">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="事務スタッフ">
+          <span class="p-jobs__item-tag">OFFICE</span>
+        </div>
+        <div class="p-jobs__item-content">
+          <div class="p-jobs__item-en">JOB 04 — OFFICE STAFF</div>
+          <h3 class="p-jobs__item-title">一般事務スタッフ</h3>
+          <p class="p-jobs__item-text">
+            電話対応、伝票入力、請求書発行、来客応対などの一般事務業務。物流業界の経験は問いません。Excel・Wordの基本操作ができればOK。
+          </p>
+          <dl class="p-jobs__item-conditions">
+            <div class="p-jobs__item-condition"><dt>雇用形態</dt><dd>正社員／パート</dd></div>
+            <div class="p-jobs__item-condition"><dt>勤務地</dt><dd>本社</dd></div>
+            <div class="p-jobs__item-condition"><dt>必要資格</dt><dd>Excel・Word基本操作</dd></div>
+            <div class="p-jobs__item-condition"><dt>給与</dt><dd>月給20万円〜／時給950円〜</dd></div>
+          </dl>
+          <a href="../contact/contact.html" class="c-btn c-btn--outline" style="font-size:13px; padding:14px 24px;">
+            この職種に応募する <span class="c-btn__arrow">→</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="p-recruit-banner">
+  <div class="p-recruit-banner__inner">
+    <div class="p-section-head js-reveal" style="text-align:center; margin-bottom:48px;">
+      <span class="p-section-head__label" style="padding-left:0;">DEEP DIVE</span>
+      <h2 class="p-section-head__title">もっと、私たちのことを知ってほしい</h2>
+    </div>
+    <div class="p-recruit-banner__grid">
+      <a href="voice.html" class="p-recruit-banner__item js-reveal" data-delay="1">
+        <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="スタッフの声" class="p-recruit-banner__img">
+        <div class="p-recruit-banner__overlay"></div>
+        <div class="p-recruit-banner__content">
+          <div class="p-recruit-banner__en">CONTENT 01 — VOICE</div>
+          <div class="p-recruit-banner__title">スタッフの声</div>
+          <p class="p-recruit-banner__text">現役スタッフのリアルな転職ストーリーや本音を、YouTube動画でお届け。</p>
+          <span class="p-recruit-banner__btn">動画一覧を見る <span>→</span></span>
+        </div>
+      </a>
+      <a href="schedule.html" class="p-recruit-banner__item js-reveal" data-delay="2">
+        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="1日の流れ" class="p-recruit-banner__img">
+        <div class="p-recruit-banner__overlay"></div>
+        <div class="p-recruit-banner__content">
+          <div class="p-recruit-banner__en">CONTENT 02 — SCHEDULE</div>
+          <div class="p-recruit-banner__title">スタッフの1日の流れ</div>
+          <p class="p-recruit-banner__text">朝の出勤から退勤まで、写真付きでスタッフのリアルなスケジュールをご紹介。</p>
+          <span class="p-recruit-banner__btn">スケジュールを見る <span>→</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="p-benefits">
+  <div class="l-container">
+    <div class="p-section-head js-reveal">
+      <span class="p-section-head__label">BENEFITS</span>
+      <h2 class="p-section-head__title">福利厚生・教育制度</h2>
+    </div>
+    <div class="p-benefits__list">
+      <div class="p-benefits__item js-reveal" data-delay="1">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="p-benefits__item-title">各種社会保険完備</h3>
+        <p class="p-benefits__item-text">健康保険・厚生年金・雇用保険・労災保険を完備</p>
+      </div>
+      <div class="p-benefits__item js-reveal" data-delay="2">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h3 class="p-benefits__item-title">資格取得支援</h3>
+        <p class="p-benefits__item-text">大型免許・フォーク等の取得費用を会社負担</p>
+      </div>
+      <div class="p-benefits__item js-reveal" data-delay="3">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3 class="p-benefits__item-title">充実の研修制度</h3>
+        <p class="p-benefits__item-text">未経験者向けOJT、安全運転研修、業界研修など</p>
+      </div>
+      <div class="p-benefits__item js-reveal" data-delay="4">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 class="p-benefits__item-title">賞与年2回・昇給年1回</h3>
+        <p class="p-benefits__item-text">業績に応じて支給。長く働ける環境を整備</p>
+      </div>
+      <div class="p-benefits__item js-reveal" data-delay="1">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3 class="p-benefits__item-title">有給休暇</h3>
+        <p class="p-benefits__item-text">取得率向上に取り組み中。リフレッシュ重視</p>
+      </div>
+      <div class="p-benefits__item js-reveal" data-delay="2">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="p-benefits__item-title">社員寮・住宅手当</h3>
+        <p class="p-benefits__item-text">県外からの就職も安心。住宅補助制度あり</p>
+      </div>
+      <div class="p-benefits__item js-reveal" data-delay="3">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3 class="p-benefits__item-title">健康診断</h3>
+        <p class="p-benefits__item-text">年1回の定期健診。社員の健康を守ります</p>
+      </div>
+      <div class="p-benefits__item js-reveal" data-delay="4">
+        <div class="p-benefits__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h3 class="p-benefits__item-title">慶弔見舞金制度</h3>
+        <p class="p-benefits__item-text">結婚・出産・弔事の際にサポート</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-contact-cta">
+  <div class="l-container">
+    <div class="p-contact-cta__label">JOIN US</div>
+    <h2 class="p-contact-cta__title">私たちと一緒に、<br>山陰の物流を支えませんか？</h2>
+    <p class="p-contact-cta__text">
+      ご応募・ご質問はお気軽にお問い合わせください。じょぶる島根に求人情報を掲載中です。<br>
+      まずはお話してみませんか？
+    </p>
+    <a href="../contact/contact.html" class="c-btn c-btn--primary p-contact-cta__btn">
+      応募・お問い合わせはこちら <span class="c-btn__arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="l-footer">
+  <div class="l-container">
+    <div class="p-footer__top">
+      <div>
+        <div class="p-header__logo" style="color:#fff; margin-bottom:24px;">
+          <span class="p-header__logo-mark">SBS</span>
+          <span class="p-header__logo-text">
+            <small>SANIN LOGISTICS</small>
+            <strong>株式会社山陰物流サービス</strong>
+          </span>
+        </div>
+        <p class="p-footer__company-info">
+          〒699-0109 島根県松江市東出雲町錦浜583-19<br>
+          TEL: 0852-67-5566 / FAX: 0852-67-3300<br>
+          営業時間 平日 8:00 - 17:00
+        </p>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">RECRUIT</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="recruit.html" class="p-footer__nav-link">採用情報トップ</a></li>
+          <li><a href="voice.html" class="p-footer__nav-link">スタッフの声</a></li>
+          <li><a href="schedule.html" class="p-footer__nav-link">1日の流れ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">COMPANY</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="../about/about.html" class="p-footer__nav-link">会社概要</a></li>
+          <li><a href="../services/services.html" class="p-footer__nav-link">業務内容</a></li>
+          <li><a href="../news/news.html" class="p-footer__nav-link">お知らせ</a></li>
+          <li><a href="../contact/contact.html" class="p-footer__nav-link">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-footer__bottom">
+      <div class="p-footer__copy">© 2025 株式会社山陰物流サービス All Rights Reserved.</div>
+      <div class="p-footer__legal">
+        <a href="#">個人情報保護方針</a>
+        <a href="#">サイトマップ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>

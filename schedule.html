@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社山陰物流サービスのスタッフの1日の流れ｜ドライバー・倉庫スタッフ・配車係・事務スタッフの仕事の流れを写真付きで紹介します。">
+<title>スタッフの1日の流れ | 採用情報 | 株式会社山陰物流サービス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common.css">
+
+<style>
+.p-schedule-intro { padding: 100px 0 60px; background: #fff; position: relative; overflow: hidden; }
+@media (max-width: 768px) { .p-schedule-intro { padding: 80px 0 40px; } }
+.p-schedule-intro::before {
+  content: 'SCHEDULE';
+  position: absolute; top: 60px; right: -40px;
+  font-family: var(--font-en);
+  font-size: clamp(160px, 24vw, 320px);
+  color: rgba(10, 37, 64, 0.04);
+  font-weight: 900; line-height: 1;
+  pointer-events: none; letter-spacing: -0.03em;
+}
+.p-schedule-intro__lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.8; font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  max-width: 820px; letter-spacing: 0.02em;
+  position: relative; z-index: 1;
+}
+.p-schedule-intro__text {
+  font-size: 15px; line-height: 2;
+  color: var(--color-text-light);
+  max-width: 820px;
+  position: relative; z-index: 1;
+}
+
+/* Tab Navigation */
+.p-schedule-tabs { background: var(--color-bg-soft); padding: 60px 0 0; }
+.p-schedule-tabs__nav {
+  display: flex; flex-wrap: wrap;
+  gap: 8px; justify-content: center;
+  padding-bottom: 56px;
+}
+.p-schedule-tabs__btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 16px 28px;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-size: 14px; font-weight: 700;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all .3s var(--ease-out);
+  font-family: var(--font-jp);
+}
+.p-schedule-tabs__btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+.p-schedule-tabs__btn.is-active {
+  background: var(--color-primary); color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(10, 37, 64, 0.2);
+}
+.p-schedule-tabs__btn-label {
+  font-family: var(--font-en);
+  font-size: 11px; letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+/* Tab Content */
+.p-schedule-tab-content { display: none; }
+.p-schedule-tab-content.is-active { display: block; }
+
+/* Person Card */
+.p-schedule-person {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.08);
+  margin-bottom: 80px;
+}
+.p-schedule-person__inner {
+  display: grid; grid-template-columns: 1fr; gap: 0;
+}
+@media (min-width: 768px) {
+  .p-schedule-person__inner { grid-template-columns: 0.8fr 1.2fr; }
+}
+.p-schedule-person__visual {
+  aspect-ratio: 4/3; overflow: hidden; position: relative;
+}
+@media (min-width: 768px) {
+  .p-schedule-person__visual { aspect-ratio: auto; min-height: 360px; }
+}
+.p-schedule-person__visual img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.p-schedule-person__info { padding: 40px 32px; }
+@media (min-width: 1024px) { .p-schedule-person__info { padding: 56px 48px; } }
+.p-schedule-person__role {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px;
+  background: var(--color-accent); color: var(--color-primary);
+  border-radius: 4px;
+  font-family: var(--font-en);
+  font-size: 11px; letter-spacing: 0.2em;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.p-schedule-person__name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.8vw, 2rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+.p-schedule-person__name small {
+  display: block; font-family: var(--font-jp);
+  font-size: 13px; color: var(--color-text-light);
+  font-weight: 400; letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+.p-schedule-person__profile {
+  display: grid; grid-template-columns: 1fr;
+  gap: 8px; padding: 20px;
+  background: var(--color-bg-soft); border-radius: 6px;
+  margin-bottom: 24px;
+}
+@media (min-width: 540px) {
+  .p-schedule-person__profile { grid-template-columns: 1fr 1fr; }
+}
+.p-schedule-person__profile-item {
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 12px; font-size: 13px;
+}
+.p-schedule-person__profile-item dt {
+  color: var(--color-text-light); font-weight: 500;
+}
+.p-schedule-person__profile-item dd {
+  color: var(--color-text); font-weight: 500;
+}
+.p-schedule-person__quote {
+  font-family: var(--font-serif);
+  font-size: 16px; line-height: 1.9;
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 16px 20px;
+  background: rgba(245, 166, 35, 0.08);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 4px;
+}
+
+/* Timeline */
+.p-schedule-timeline {
+  background: #fff;
+  border-radius: 12px;
+  padding: 48px 32px;
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.06);
+  position: relative;
+}
+@media (min-width: 768px) { .p-schedule-timeline { padding: 56px 56px; } }
+
+.p-schedule-timeline__head {
+  text-align: center; margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-border);
+}
+.p-schedule-timeline__head-label {
+  font-family: var(--font-en);
+  font-size: 12px; color: var(--color-accent);
+  letter-spacing: 0.3em; margin-bottom: 12px;
+}
+.p-schedule-timeline__head-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  font-weight: 900; color: var(--color-primary);
+  letter-spacing: 0.04em;
+}
+
+.p-timeline-list {
+  position: relative;
+  padding-left: 24px;
+}
+@media (min-width: 768px) { .p-timeline-list { padding-left: 0; } }
+.p-timeline-list::before {
+  content: '';
+  position: absolute; left: 8px; top: 16px; bottom: 16px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-accent), rgba(245, 166, 35, 0.2));
+}
+@media (min-width: 768px) { .p-timeline-list::before { left: 100px; } }
+
+.p-timeline-step {
+  position: relative; padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .p-timeline-step {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 56px; padding-bottom: 48px;
+  }
+}
+.p-timeline-step:last-child { padding-bottom: 0; }
+.p-timeline-step::before {
+  content: '';
+  position: absolute; left: 0; top: 4px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 2px var(--color-accent), 0 4px 12px rgba(245, 166, 35, 0.4);
+  z-index: 2;
+}
+@media (min-width: 768px) { .p-timeline-step::before { left: 92px; } }
+
+.p-timeline-step__time {
+  padding-left: 36px;
+  margin-bottom: 12px;
+  font-family: var(--font-en);
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .p-timeline-step__time {
+    padding-left: 0; margin-bottom: 0;
+    text-align: right; padding-right: 16px;
+  }
+}
+
+.p-timeline-step__content {
+  padding-left: 36px;
+}
+@media (min-width: 768px) { .p-timeline-step__content { padding-left: 0; } }
+
+.p-timeline-step__inner {
+  background: var(--color-bg-soft);
+  border-radius: 8px;
+  overflow: hidden;
+  border-left: 3px solid var(--color-accent);
+  transition: all .3s var(--ease-out);
+}
+.p-timeline-step__inner:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 32px rgba(10, 37, 64, 0.1);
+}
+.p-timeline-step__grid {
+  display: grid; grid-template-columns: 1fr;
+}
+@media (min-width: 540px) {
+  .p-timeline-step__grid { grid-template-columns: 200px 1fr; }
+}
+.p-timeline-step__img {
+  aspect-ratio: 4/3; overflow: hidden;
+}
+@media (min-width: 540px) {
+  .p-timeline-step__img { aspect-ratio: auto; height: 100%; min-height: 160px; }
+}
+.p-timeline-step__img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .8s var(--ease-out);
+}
+.p-timeline-step__inner:hover .p-timeline-step__img img { transform: scale(1.06); }
+.p-timeline-step__text { padding: 20px 24px; }
+.p-timeline-step__title {
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.p-timeline-step__desc {
+  font-size: 13px; line-height: 1.9;
+  color: var(--color-text);
+}
+
+/* Weekly Schedule */
+.p-weekly { padding: 120px 0; background: #fff; }
+@media (max-width: 768px) { .p-weekly { padding: 80px 0; } }
+.p-weekly__table-wrap { overflow-x: auto; }
+.p-weekly__table {
+  width: 100%; min-width: 720px;
+  border-collapse: collapse;
+  background: var(--color-bg-soft);
+  border-radius: 8px; overflow: hidden;
+}
+.p-weekly__table th,
+.p-weekly__table td {
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 13px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.p-weekly__table th {
+  background: var(--color-primary); color: #fff;
+  font-weight: 700; letter-spacing: 0.05em;
+}
+.p-weekly__table th:first-child {
+  background: var(--color-bg-dark);
+  width: 100px;
+}
+.p-weekly__table tr:last-child td { border-bottom: none; }
+.p-weekly__table th:last-child,
+.p-weekly__table td:last-child { border-right: none; }
+.p-weekly__table td.is-rest {
+  background: rgba(245, 166, 35, 0.15);
+  color: var(--color-accent);
+  font-weight: 700;
+}
+.p-weekly__table td.is-work {
+  background: #fff;
+  color: var(--color-text);
+}
+.p-weekly__table td.is-half {
+  background: rgba(74, 144, 226, 0.1);
+  color: #4a90e2;
+  font-weight: 700;
+}
+.p-weekly__legend {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  margin-top: 24px;
+  font-size: 12px;
+}
+.p-weekly__legend-item {
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.p-weekly__legend-mark {
+  width: 16px; height: 16px; border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+<header class="l-header">
+  <div class="p-header__inner">
+    <a href="../index.html" class="p-header__logo">
+      <span class="p-header__logo-mark">SBS</span>
+      <span class="p-header__logo-text">
+        <small>SANIN LOGISTICS</small>
+        <strong>株式会社山陰物流サービス</strong>
+      </span>
+    </a>
+    <nav class="p-header__nav">
+      <ul class="p-header__nav-list">
+        <li><a href="../about/about.html" class="p-header__nav-link">会社概要</a></li>
+        <li><a href="../services/services.html" class="p-header__nav-link">業務内容</a></li>
+        <li><a href="../news/news.html" class="p-header__nav-link">お知らせ</a></li>
+        <li><a href="recruit.html" class="p-header__nav-link is-current">採用情報</a></li>
+      </ul>
+      <a href="../contact/contact.html" class="p-header__cta">お問い合わせ <span>→</span></a>
+    </nav>
+    <button class="p-header__menu-btn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="p-page-hero">
+  <div class="p-page-hero__bg">
+    <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="物流の作業風景">
+  </div>
+  <div class="p-page-hero__overlay"></div>
+  <div class="p-page-hero__grid"></div>
+  <div class="p-page-hero__inner">
+    <span class="p-page-hero__label">RECRUIT — SCHEDULE</span>
+    <span class="p-page-hero__title-en">A DAY IN THE LIFE</span>
+    <h1 class="p-page-hero__title">スタッフの1日の流れ</h1>
+    <nav class="p-page-hero__breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">HOME</a>
+      <span class="p-page-hero__breadcrumb-sep">▶</span>
+      <a href="recruit.html">採用情報</a>
+      <span class="p-page-hero__breadcrumb-sep">▶</span>
+      <span class="p-page-hero__breadcrumb-current">1日の流れ</span>
+    </nav>
+  </div>
+</section>
+
+<section class="p-schedule-intro">
+  <div class="l-container">
+    <div class="p-section-head js-reveal">
+      <span class="p-section-head__label">A DAY IN THE LIFE</span>
+      <h2 class="p-section-head__title">
+        スタッフの<em>1日の流れ</em>を、<br>
+        写真でご紹介
+      </h2>
+    </div>
+
+    <p class="p-schedule-intro__lead js-reveal" data-delay="1">
+      入社後、<span class="u-underline">どんな1日を過ごすのか</span>。<br>
+      ドライバー・倉庫スタッフの仕事の流れを、写真付きで詳しくご紹介します。
+    </p>
+
+    <p class="p-schedule-intro__text js-reveal" data-delay="2">
+      朝の出勤から退勤まで、各職種のスタッフが実際にどのような業務を行っているのか、時間軸に沿ってご覧いただけます。「働くイメージ」を具体的に持っていただくために、現場のリアルな作業風景の写真を中心にご紹介しています。
+    </p>
+  </div>
+</section>
+
+<section class="p-schedule-tabs">
+  <div class="l-container">
+    <div class="p-schedule-tabs__nav js-reveal">
+      <button class="p-schedule-tabs__btn is-active" data-tab="driver">
+        <span>
+          <span class="p-schedule-tabs__btn-label">SCHEDULE 01</span><br>
+          ドライバー編
+        </span>
+      </button>
+      <button class="p-schedule-tabs__btn" data-tab="warehouse">
+        <span>
+          <span class="p-schedule-tabs__btn-label">SCHEDULE 02</span><br>
+          倉庫スタッフ編
+        </span>
+      </button>
+    </div>
+
+    <!-- ============ DRIVER TAB ============ -->
+    <div class="p-schedule-tab-content is-active" data-content="driver">
+      <div class="p-schedule-person js-reveal">
+        <div class="p-schedule-person__inner">
+          <div class="p-schedule-person__visual">
+            <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="ドライバー佑介さん">
+          </div>
+          <div class="p-schedule-person__info">
+            <span class="p-schedule-person__role">DRIVER STAFF</span>
+            <h3 class="p-schedule-person__name">
+              佑介さん
+              <small>トラックドライバー｜入社2年目（28歳）</small>
+            </h3>
+            <dl class="p-schedule-person__profile">
+              <div class="p-schedule-person__profile-item"><dt>勤務地</dt><dd>本社</dd></div>
+              <div class="p-schedule-person__profile-item"><dt>担当ルート</dt><dd>関西方面</dd></div>
+              <div class="p-schedule-person__profile-item"><dt>前職</dt><dd>介護士</dd></div>
+              <div class="p-schedule-person__profile-item"><dt>休日</dt><dd>土日祝（週休2日）</dd></div>
+            </dl>
+            <p class="p-schedule-person__quote">
+              「<span class="u-underline">運転が好き、人を支える仕事が好き</span>。<br>
+              この2つが両立できるのが、ドライバーの魅力です。」
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-schedule-timeline js-reveal" data-delay="1">
+        <div class="p-schedule-timeline__head">
+          <div class="p-schedule-timeline__head-label">A DAY OF DRIVER</div>
+          <h3 class="p-schedule-timeline__head-title">ドライバーの1日のスケジュール</h3>
+        </div>
+
+        <div class="p-timeline-list">
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">5:30</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="出勤・点呼">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">出勤・アルコールチェック</h4>
+                    <p class="p-timeline-step__desc">
+                      会社に出勤し、まずはアルコールチェックと健康状態の確認。安全運行のための基本中の基本です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">5:45</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="点呼・打ち合わせ">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">点呼・運行打ち合わせ</h4>
+                    <p class="p-timeline-step__desc">
+                      運行管理者と当日のルート、配送先、注意点を確認。配車係から最新情報を共有してもらいます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">6:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="出発">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">出発・荷物積み込み確認</h4>
+                    <p class="p-timeline-step__desc">
+                      車両点検後、SBS物流センターで荷物を積み込み、行程表をチェックして出発。安全運転を心がけて出発します。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">10:30</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="休憩">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">途中休憩・点検</h4>
+                    <p class="p-timeline-step__desc">
+                      法令に基づき、サービスエリアで休憩。車両の点検も行い、安全運行に努めます。同僚とゆっくりお茶を飲む時間も。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">12:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="納品">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">荷下ろし・納品</h4>
+                    <p class="p-timeline-step__desc">
+                      納品先に到着し、確実な荷下ろしを実施。お客様へ伝票をお渡しし、丁寧にご挨拶。「ありがとう」が一番のやりがいです。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">13:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="昼食">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">お昼休憩</h4>
+                    <p class="p-timeline-step__desc">
+                      お気に入りのドライブインで昼食。同じ会社のドライバーと顔を合わせることもあり、情報交換する時間になっています。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">14:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="復路">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">復路・帰り荷集荷</h4>
+                    <p class="p-timeline-step__desc">
+                      復路の途中で別のお客様の荷物を集荷。配車係と連絡を取りながら、効率的なルートで会社へ戻ります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">17:30</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1591785472141-7adb0d4d4cf2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="帰社">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">帰社・点呼・退勤</h4>
+                    <p class="p-timeline-step__desc">
+                      会社到着後、車両の最終点検と運行記録を提出。帰着点呼を済ませ、お疲れさまでした。明日も安全運転で頑張ります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ WAREHOUSE TAB ============ -->
+    <div class="p-schedule-tab-content" data-content="warehouse">
+      <div class="p-schedule-person">
+        <div class="p-schedule-person__inner">
+          <div class="p-schedule-person__visual">
+            <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="倉庫スタッフ大輔さん">
+          </div>
+          <div class="p-schedule-person__info">
+            <span class="p-schedule-person__role">WAREHOUSE STAFF</span>
+            <h3 class="p-schedule-person__name">
+              大輔さん
+              <small>倉庫スタッフ｜入社5年目（35歳）</small>
+            </h3>
+            <dl class="p-schedule-person__profile">
+              <div class="p-schedule-person__profile-item"><dt>勤務地</dt><dd>SBS物流センター</dd></div>
+              <div class="p-schedule-person__profile-item"><dt>担当業務</dt><dd>入出荷・流通加工</dd></div>
+              <div class="p-schedule-person__profile-item"><dt>保有資格</dt><dd>フォークリフト</dd></div>
+              <div class="p-schedule-person__profile-item"><dt>休日</dt><dd>土日祝（週休2日）</dd></div>
+            </dl>
+            <p class="p-schedule-person__quote">
+              「最新の倉庫設備で働けるのが嬉しいですね。<br>
+              <span class="u-underline">作業効率が上がれば、自分の時間も増える</span>。それが何より大きい。」
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-schedule-timeline">
+        <div class="p-schedule-timeline__head">
+          <div class="p-schedule-timeline__head-label">A DAY OF WAREHOUSE STAFF</div>
+          <h3 class="p-schedule-timeline__head-title">倉庫スタッフの1日のスケジュール</h3>
+        </div>
+
+        <div class="p-timeline-list">
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">8:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="出勤・朝礼">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">出勤・朝礼</h4>
+                    <p class="p-timeline-step__desc">
+                      SBS物流センターに出勤、朝礼で当日の入出荷スケジュール、安全への注意点をチームで共有します。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">8:30</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="入荷作業">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">入荷作業・検品</h4>
+                    <p class="p-timeline-step__desc">
+                      到着したトラックから荷物を受け取り、品目・数量を検品。フォークリフトで指定の保管エリアへ移動させます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">10:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1591785472141-7adb0d4d4cf2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="保管・在庫管理">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">保管・在庫管理</h4>
+                    <p class="p-timeline-step__desc">
+                      可動式パレットラックを使った保管作業。在庫管理システムへ入力し、リアルタイムで在庫状況を把握します。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">12:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="昼食">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">お昼休憩</h4>
+                    <p class="p-timeline-step__desc">
+                      休憩室でゆっくり昼食。お弁当派、コンビニ派、外食派と様々。スタッフ同士の交流時間でもあります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">13:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="流通加工">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">流通加工作業</h4>
+                    <p class="p-timeline-step__desc">
+                      ラベル貼り、セット組、検品など、お客様のご要望に応じた付加価値作業を実施。丁寧な仕事が信頼につながります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">15:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="出荷準備">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">出荷準備・ピッキング</h4>
+                    <p class="p-timeline-step__desc">
+                      ピッキングリストに基づき、出荷する商品を集めます。間違いがないようダブルチェックして、出荷を準備。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">16:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="出荷">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">出荷・トラック積込</h4>
+                    <p class="p-timeline-step__desc">
+                      ドックレベラーを使ってトラックへ積み込み。配車係・ドライバーと連携し、スムーズに出荷します。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-timeline-step">
+            <div class="p-timeline-step__time">17:00</div>
+            <div class="p-timeline-step__content">
+              <div class="p-timeline-step__inner">
+                <div class="p-timeline-step__grid">
+                  <div class="p-timeline-step__img">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="退勤">
+                  </div>
+                  <div class="p-timeline-step__text">
+                    <h4 class="p-timeline-step__title">片付け・退勤</h4>
+                    <p class="p-timeline-step__desc">
+                      フォークリフトの定位置返却、倉庫の整理整頓、翌日の準備を済ませて退勤。明日も気持ちよく仕事ができるよう、毎日きれいに。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-weekly">
+  <div class="l-container">
+    <div class="p-section-head js-reveal">
+      <span class="p-section-head__label">WEEKLY SCHEDULE</span>
+      <h2 class="p-section-head__title">1週間のスケジュール例</h2>
+      <p class="p-section-head__lead">
+        週休2日制で、<span class="u-underline">プライベートの時間も大切に</span>できる働き方を実現しています。
+      </p>
+    </div>
+
+    <div class="p-weekly__table-wrap js-reveal" data-delay="1">
+      <table class="p-weekly__table">
+        <thead>
+          <tr>
+            <th>職種</th>
+            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>ドライバー</th>
+            <td class="is-work">関西</td>
+            <td class="is-work">山陽</td>
+            <td class="is-work">関西</td>
+            <td class="is-rest">休</td>
+            <td class="is-work">山陽</td>
+            <td class="is-work">中国</td>
+            <td class="is-rest">休</td>
+          </tr>
+          <tr>
+            <th>倉庫スタッフ</th>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-rest">休</td>
+            <td class="is-rest">休</td>
+          </tr>
+          <tr>
+            <th>配車・運行管理</th>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-half">隔週</td>
+            <td class="is-rest">休</td>
+          </tr>
+          <tr>
+            <th>事務スタッフ</th>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-work">日勤</td>
+            <td class="is-rest">休</td>
+            <td class="is-rest">休</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="p-weekly__legend js-reveal" data-delay="2">
+      <div class="p-weekly__legend-item">
+        <span class="p-weekly__legend-mark" style="background:#fff; border:1px solid var(--color-border);"></span>勤務日
+      </div>
+      <div class="p-weekly__legend-item">
+        <span class="p-weekly__legend-mark" style="background:rgba(245, 166, 35, 0.15);"></span>休日
+      </div>
+      <div class="p-weekly__legend-item">
+        <span class="p-weekly__legend-mark" style="background:rgba(74, 144, 226, 0.1);"></span>隔週勤務
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-side-nav">
+  <div class="l-container">
+    <div class="p-section-head p-section-head--center js-reveal">
+      <span class="p-section-head__label">RELATED PAGES</span>
+      <h2 class="p-section-head__title">関連ページ</h2>
+    </div>
+    <div class="p-side-nav__list js-reveal" data-delay="1">
+      <a href="recruit.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1622019155501-7c10adcb5e08?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="採用情報" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">採用情報トップ</div><span class="p-side-nav__text-en">RECRUIT</span></div>
+      </a>
+      <a href="voice.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="スタッフの声" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">スタッフの声</div><span class="p-side-nav__text-en">VOICE</span></div>
+      </a>
+      <a href="../about/about.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="会社概要" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">会社概要</div><span class="p-side-nav__text-en">ABOUT</span></div>
+      </a>
+      <a href="../contact/contact.html" class="p-side-nav__item">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="お問い合わせ" class="p-side-nav__img">
+        <div class="p-side-nav__overlay"></div>
+        <div class="p-side-nav__text"><div class="p-side-nav__text-jp">お問い合わせ</div><span class="p-side-nav__text-en">CONTACT</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="p-contact-cta">
+  <div class="l-container">
+    <div class="p-contact-cta__label">JOIN US</div>
+    <h2 class="p-contact-cta__title">私たちの1日が、<br>あなたの新しい1日になる</h2>
+    <p class="p-contact-cta__text">
+      仕事の流れに興味を持っていただけたら、ぜひお気軽にお問い合わせください。<br>
+      職場見学も随時受け付けております。
+    </p>
+    <a href="../contact/contact.html" class="c-btn c-btn--primary p-contact-cta__btn">
+      応募・お問い合わせはこちら <span class="c-btn__arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="l-footer">
+  <div class="l-container">
+    <div class="p-footer__top">
+      <div>
+        <div class="p-header__logo" style="color:#fff; margin-bottom:24px;">
+          <span class="p-header__logo-mark">SBS</span>
+          <span class="p-header__logo-text">
+            <small>SANIN LOGISTICS</small>
+            <strong>株式会社山陰物流サービス</strong>
+          </span>
+        </div>
+        <p class="p-footer__company-info">
+          〒699-0109 島根県松江市東出雲町錦浜583-19<br>
+          TEL: 0852-67-5566 / FAX: 0852-67-3300<br>
+          営業時間 平日 8:00 - 17:00
+        </p>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">RECRUIT</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="recruit.html" class="p-footer__nav-link">採用情報トップ</a></li>
+          <li><a href="voice.html" class="p-footer__nav-link">スタッフの声</a></li>
+          <li><a href="schedule.html" class="p-footer__nav-link">1日の流れ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="p-footer__nav-title">COMPANY</div>
+        <ul class="p-footer__nav-list">
+          <li><a href="../about/about.html" class="p-footer__nav-link">会社概要</a></li>
+          <li><a href="../services/services.html" class="p-footer__nav-link">業務内容</a></li>
+          <li><a href="../news/news.html" class="p-footer__nav-link">お知らせ</a></li>
+          <li><a href="../contact/contact.html" class="p-footer__nav-link">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-footer__bottom">
+      <div class="p-footer__copy">© 2025 株式会社山陰物流サービス All Rights Reserved.</div>
+      <div class="p-footer__legal">
+        <a href="#">個人情報保護方針</a>
+        <a href="#">サイトマップ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/common.js"></script>
+<script>
+// Tab switching for schedule
+document.querySelectorAll('.p-schedule-tabs__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    // Toggle button active state
+    document.querySelectorAll('.p-schedule-tabs__btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    // Toggle content active state
+    document.querySelectorAll('.p-schedule-tab-content').forEach(c => c.classList.remove('is-active'));
+    const content = document.querySelector(`.p-schedule-tab-content[data-content="${tab}"]`);
+    if (content) content.classList.add('is-active');
+  });
+});
+</script>
+</body>
+</html>
